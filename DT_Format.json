@@ -1,6 +1,5 @@
 ﻿[
 	{
-	  "Name": "01",
 	  "BUSINESS_NAME": "솔잎떡마을",
 	  "TAX_ID": "524-25-01148",
 	  "OWNER_NAME": "최민식",
@@ -13,7 +12,6 @@
 	  }
 	},
 	{
-	  "Name": "02",
 	  "BUSINESS_NAME": "카페꼬미",
 	  "TAX_ID": "662-40-01235",
 	  "OWNER_NAME": "김민주",
@@ -27,7 +25,6 @@
 	  }
 	},
 	{
-	  "Name": "03",
 	  "BUSINESS_NAME": "스포애니 강남 1호점",
 	  "TAX_ID": "662-80-01236",  // Corrected TAX_ID to be unique
 	  "OWNER_NAME": "김민주",
