@@ -1,37 +1,39 @@
-[
-	{
-	  "BUSINESS_NAME": "솔잎떡마을",
-	  "TAX_ID": "524-25-01148",
-	  "OWNER_NAME": "최민식",
-	  "ADDRESS": "서울 강남구 강남대로78길 8 한국빌딩 B2층",
-	  "BUSINESS_NUMBER": "02-0000-01234",
-	  "MENU_PRICE": {
-		"음료수": 2000,
-		"칼집 삼겹살": 13000,
-		"두툼 목살": 15000
+{
+	"clients": [
+	  {
+		"BUSINESS_NAME": "솔잎떡마을",
+		"TAX_ID": "524-25-01148",
+		"OWNER_NAME": "최민식",
+		"ADDRESS": "서울 강남구 강남대로78길 8 한국빌딩 B2층",
+		"BUSINESS_NUMBER": "02-0000-01234",
+		"MENU_PRICE": {
+		  "음료수": 2000,
+		  "칼집 삼겹살": 13000,
+		  "두툼 목살": 15000
+		}
+	  },
+	  {
+		"BUSINESS_NAME": "카페꼬미",
+		"TAX_ID": "662-40-01235",
+		"OWNER_NAME": "김민주",
+		"ADDRESS": "서울 강남구 테헤란로53길 47 (역삼동, 공간1차) 101호",
+		"BUSINESS_NUMBER": "02-0000-0023",
+		"MENU_PRICE": {
+		  "I-얼그레이라떼/밀": 6000,
+		  "I-아메리카노": 4500,
+		  "I-카페라떼": 5500,
+		  "I-초코라떼": 5500
+		}
+	  },
+	  {
+		"BUSINESS_NAME": "스포애니 강남 1호점",
+		"TAX_ID": "662-80-01236",
+		"OWNER_NAME": "김민주",
+		"ADDRESS": "서울 강남구 테헤란로53길 47 (역삼동, 공간1차) 102호",
+		"BUSINESS_NUMBER": "02-0000-0001",
+		"MENU_PRICE": {
+		  "일일이용권": 20000
+		}
 	  }
-	},
-	{
-	  "BUSINESS_NAME": "카페꼬미",
-	  "TAX_ID": "662-40-01235",
-	  "OWNER_NAME": "김민주",
-	  "ADDRESS": "서울 강남구 테헤란로53길 47 (역삼동, 공간1차) 101호",
-	  "BUSINESS_NUMBER": "02-0000-0023",
-	  "MENU_PRICE": {
-		"I-얼그레이라떼/밀": 6000,
-		"I-아메리카노": 4500,
-		"I-카페라떼": 5500,
-		"I-초코라떼": 5500
-	  }
-	},
-	{
-	  "BUSINESS_NAME": "스포애니 강남 1호점",
-	  "TAX_ID": "662-80-01236",  // Corrected TAX_ID to be unique
-	  "OWNER_NAME": "김민주",
-	  "ADDRESS": "서울 강남구 테헤란로53길 47 (역삼동, 공간1차) 102호", //Corrected Address to be unique
-	  "BUSINESS_NUMBER": "02-0000-0001", //Corrected Business Number to be unique
-	  "MENU_PRICE": {
-		"일일이용권": 20000
-	  }
-	}
-]
+	]
+  }
