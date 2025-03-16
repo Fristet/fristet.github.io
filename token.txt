@@ -2,3 +2,4 @@ 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
 
 https://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@raw.githubusercontent.com/Fristet/fristet.github.io/refs/heads/master/client_format.json
 https://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@raw.githubusercontent.com/Fristet/fristet.github.io/refs/heads/master/card_format.json
+https://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@raw.githubusercontent.com/Fristet/fristet.github.io/refs/heads/master/license_format.json

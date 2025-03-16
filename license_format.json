@@ -12,5 +12,12 @@
     "expire_date": "20250505",
     "Token": "fcff46fe-db70-45ab-8270-57d3ba908589",
     "status": "activated"
+  },
+  {
+    "id": 2,
+    "license_owner": "deactivated",
+    "expire_date": "20250505",
+    "Token": "a21b2a5f-ba63-426d-bd1f-76079a9d44dc ",
+    "status": "null"
   }
 ]
