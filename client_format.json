@@ -6,6 +6,7 @@
       "owner_name": "김안라",
       "address": "전남 영광군 영광읍 천년로10길 7 1층 솔잎떡마을",
       "business_number": "010-5050-4349",
+      "business_horus": "09001800",
       "menu_price": [
             {
                 "[찐]통동부 모시송편(10봉지:20개입)": 12000,
@@ -23,6 +24,7 @@
       "owner_name": "김민주",
       "address": "서울 강남구 테헤란로53길 47 (역삼동, 공간1차) 101호",
       "business_number": "070-8161-7013",
+      "business_horus": "09001800",
       "menu_price": [
             {
                 "아메리카노": 4500,
@@ -43,6 +45,7 @@
       "owner_name": "김민주",
       "address": "서울 광진구 자양로18길 79 1층 동적깡통구이",
       "business_number": "0507-1386-1051",
+      "business_horus": "09001800",
       "menu_price": [
             {
             "소갈비살": 21000,
@@ -66,6 +69,7 @@
         "owner_name": "박현우",
         "address": "서울 광진구 자양로18길 79 1층 동적깡통구이",
         "business_number": "0507-1386-1051",
+        "business_horus": "09001800",
         "menu_price": [
               {
               "소갈비살": 21000,
