@@ -6,7 +6,7 @@
         "owner_name": "안시은",
         "address": "서울 강남구 테헤란로43길 29",
         "business_number": "",
-        "business_horus": "09002359",
+        "business_hour": "09002359",
         "menu_price": [
             {
                 "아메리카노": 3000,
@@ -44,7 +44,7 @@
         "owner_name": "김민주",
         "address": "서울 강남구 테헤란로53길 47 (역삼동, 공간1차) 101호",
         "business_number": "070-8161-7013",
-        "business_horus": "09001800",
+        "business_hour": "09001800",
         "menu_price": [
                 {
                     "아메리카노": 4500,
@@ -65,7 +65,7 @@
         "owner_name": "김민주",
         "address": "서울 광진구 자양로18길 79 1층 동적깡통구이",
         "business_number": "0507-1386-1051",
-        "business_horus": "09001800",
+        "business_hour": "09001800",
         "menu_price": [
                 {
                 "소갈비살": 21000,
@@ -85,11 +85,11 @@
     {
         "id": 4,
         "business_name": "느낌",
-        "tax_id": "662-80-01236",
+        "tax_id": "109-28-80377",
         "owner_name": "박현우",
-        "address": "서울 광진구 자양로18길 79 1층 동적깡통구이",
-        "business_number": "0507-1386-1051",
-        "business_horus": "09001800",
+        "address": "서울 광진구 면목로17길 30 (중곡동)",
+        "business_number": "010-3272-3881",
+        "business_hour": "09001800",
         "menu_price": [
               {
               "소갈비살": 21000,
