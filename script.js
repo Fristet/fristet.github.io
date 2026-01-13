@@ -1,7 +1,7 @@
 // [script.js]
 
 // ===== 프로젝트 데이터 =====
-let projects = [
+[
   {
     "id": 1768290589577,
     "title": "CINEV",
@@ -11,6 +11,7 @@ let projects = [
     "category": "PC / WEB",
     "description": "NPR과 PBR을 동시 대응하는 3D 시네마틱 생성 툴 프로젝트인 CineV에서 시니어 테크니컬 아티스트로 기여하며, PC와 Web 플랫폼을 대응하는 UE5 프로젝트에 참여했습니다.",
     "tags": [
+      "UE5",
       "C++",
       "Python",
       "Shell",
@@ -62,6 +63,7 @@ let projects = [
     "category": "PC",
     "description": "Stylized 횡스크롤 액션 프로젝트인 프로젝트 블러드에서 리드 테크니컬 아티스트로 기여\n하며, PC 플랫폼을 대응하는 UE5 프로젝트에 참여했습니다.",
     "tags": [
+      "UE5",
       "C++",
       "Python",
       "Shell",
@@ -89,6 +91,7 @@ let projects = [
     "category": "PC / PS5",
     "description": "스타일리시 액션 프로젝트인 스텔라 블레이드에서 테크니컬 아티스트로 기여하며, PS5와\nPC 플랫폼을 대응하는 UE4 프로젝트에 참여했습니다.",
     "tags": [
+      "UE4",
       "C++",
       "Python",
       "Shell",
@@ -100,12 +103,55 @@ let projects = [
       "RenderDoc",
       "AMD GPU Profiler"
     ],
-    "image": "src/images/sb_02.webp",
-    "media": [],
+    "image": "src/images/sb/sb_02.webp",
+    "media": [
+      {
+        "type": "video",
+        "src": "https://www.youtube.com/watch?v=ayek3ZzWb1E",
+        "caption": "Stellar Blade Trailer",
+        "description": "트레일러 내에 나오는 배경의 모든 쉐이더와 최적화, 애니메이션 로직 개선 등을 담당하였습니다."
+      },
+      {
+        "type": "gallery",
+        "src": "src/images/sb/relief_decal_01.png, src/images/sb/relief_decal_02.png, src/images/sb/relief_decal_03.png, src/images/sb/relief_surface_01.png, src/images/sb/relief_surface_02.png, src/images/sb/relief_cloud_02.png",
+        "caption": "Relief Mapping",
+        "description": "기존에 밋밋한 배경의 바닥의 디테일을 올리기 위해 만든 Relief Mapping Method의 Decal과 Surface Shader입니다.\nMesh로 처리하기 부담스럽거나 일반적인 Decal의 퀄리티로는 부족한 경우 사용하기 위해 제작되었습니다.\n\nRelief Mapping을 구현하면서 카메라의 시야 각도와 객체와의 거리 등을 고려하여 샘플링 단계를 조절해 다수의 객체를 사용하더라도 효과적으로 퍼포먼스를 유지할 수 있게 설계하였습니다."
+      },
+      {
+        "type": "video",
+        "src": "src/videos/sb/bayer_dither_01.mp4",
+        "caption": "Bayer Dithering",
+        "description": "오브젝트와 카메라가 오버랩 될 때 자연스럽게 트랜지션을 줄 수 있는 Bayer Dithering을 작업하였습니다."
+      },
+      {
+        "type": "video",
+        "src": "src/videos/sb/interaction_animation_shader_01.mp4",
+        "caption": "Interactive Object Shader",
+        "description": "플레이어가 오브젝트와 인터렉션을 했을 때 발생하는 연출에 대하여 Animation 셋업과 Shader 연출 구현하여 적용했습니다."
+      },
+      {
+        "type": "video",
+        "src": "src/videos/sb/ui_location_01.mp4",
+        "caption": "UI - Location Display",
+        "description": "플레이어가 지역에 진입할 때 디스플레이 되는 UI에 연출과 쉐이더를 작업하였습니다."
+      },
+      {
+        "type": "video",
+        "src": "src/videos/sb/ui_action_01.mp4",
+        "caption": "UI - Action Notify",
+        "description": "튜토리얼 시 디스플레이 되는 UI의 연출과 쉐이더를 작업하였습니다."
+      },
+      {
+        "type": "gallery",
+        "src": "src/images/sb/Location_01.png, src/images/sb/Location_02.png, src/images/sb/Location_03.png, src/images/sb/matrix_01.jpg, src/images/sb/matrix_02.jpg, src/images/sb/matrix_03.jpg",
+        "caption": "",
+        "description": "기재 되어있는 이미지의 배경 이외에도 90% 이상의 배경에서 쉐이더 작업과 최적화 및 기술 지원의 업무를 전담하였습니다."
+      }
+    ],
     "details": {
       "overview": "스타일리시 액션 프로젝트인 스텔라 블레이드에서 테크니컬 아티스트로 기여하며, PS5와 PC 플랫폼을 대응하는 UE4 프로젝트에 참여했습니다.",
       "responsibilities": [],
-      "technologies": "123",
+      "technologies": "C++, Python, Shell, HLSL, MaxScript, Blueprint, Perforce, Jenkins, RenderDoc, AMD GPU Profiler",
       "results": "•\tPS5 플랫폼에 대한 대응을 진행했습니다.\no\tPS5와 PC 간의 상이한 칩셋의 쉐이더 컴파일 환경을 파악하고, PS5의 AMD 칩셋의 특성에 맞게 쉐이더를 수정하여 렌더링 안정성을 확보했습니다.\n\n•\t프로젝트의 세미 오픈월드 환경에 맞는 최적화를 통해 목표 프레임을 달성하였습니다.\no\t원경 디테일 유지와 퍼포먼스 확보를 위해 Imposter Baker 및 MassiveLOD Billboard 시스템 등을 활용 및 구현하여 적용했습니다.\no\t효율적인 렌더링과 CPU및 GPU 부하를 줄이기 위해 적극적으로 Section Instancing 시스템을 구현하여 적용하였습니다.\no\t일부 실시간 Light를 사용함에 있어 Shadow의 CPU및 GPU 부하를 줄이기 위해 Fake Shadow를 구현하여 적용했습니다.\no\t대량의 Foliage를 사용하는 환경에서 Foliage 리소스 제작 및 퀄리티 컨트롤, 최적화, Shader 최적화를 진행하였습니다.\no\tRenderDoc과 AMD GPU Profiler를 이용하여, PC와 PS5 플레이 환경에서의 GPU 병목을 파악하고 해결하였습니다.\no\tShader들의 Pixel 및 Vertex Shader에 Screen Size와 거리 기반의 LOD를 적용하여 연산 부하를 제어하였습니다.\n\n•\tAD가 요구하는 완성도를 위해 여러 기술적 지원을 하였습니다.\no\t카메라와 오브젝트 간의 간섭을 자연스럽게 처리하는 Dither Actor Component를 구현하여 카메라 전환 시의 시각적 이질감과 불편함을 최소화했습니다.\no\tUI 컴포넌트의 비주얼 적 완성도를 위해 UI 쉐이더들을 구현하여 적용했습니다.\no\t프로젝트에서 요구하는 비주얼 적 배경의 완성도를 위해 대부분의 배경 재질 쉐이더들을 구현하여 적용했습니다.\no\tRelief Mapping을 구현하여 Parallax Occlusion Mapping 불완전한 부분을 대체하고 퍼포먼스와 비주얼 적 완성도를 높였습니다.\no\t각종 특수한 효과들에 대한 쉐이더를 구현하여 환경에 맞는 효과적으로 완성도를 높였습니다.\n\n•\tJenkins 기반의 빌드 자동화로 개발 효율을 높였습니다.\no\tJenkins와 Shell Script를 활용한 Lightbuild Automation Tool을 개발하여, 라이팅 빌드 과정을 자동화하고 CI/CD 파이프라인에 통합하여 아티스트의 불필요한 대기 시간을 단축했습니다.\n\n•\t모션 캡쳐와 시네마틱 제작 환경을 구축하였습니다.\no\tCinematic 제작 시 Virtual Camera 등의 장비를 모션캡쳐 등에 활용할 수 있도록 관련 하드웨어 장비를 제작하고 환경을 구성하여 제공하였습니다.\n\n•\t애니메이션의 캐릭터와 환경 오브젝트 간의 인터렉션 기능을 구현하였습니다.\no\tAnimation의 인게임 환경 오브젝트 간의 인터렉션을 구현하고, 이 과정에서 Shader를 연동하여 보다 효과적인 시각적 효과를 완성하였습니다.\n\n•\t작업자의 에디터 사용 편의성을 높이기 위해 인하우스 툴을 제작하여 반복 작업을 줄이고 생산성을 향상시켰습니다.\no\t3ds Max에서 사용하기 위한 MaxScript 들과, 에디터 내에서 사용하는 여러 편의성 툴들을 개발하여 제공하였습니다.\n\n•\t협업 가이드 및 품질 표준을 수립했습니다.\no\tSony XDEV 팀과의 원활한 기술 협업을 위해 전용 가이드라인을 제작하고, 이슈 대응 및 기술 커뮤니케이션을 진행했습니다.\no\t외부의 아웃소싱 업체와의 원활한 기술 협업을 위해 가이드라인을 제작을 하고, 커뮤니케이션을 진행하였습니다.\no\tTexel Density 규약 수립 및 UVDensityVisualize 툴 개발을 통해 대규모 리소스 품질을 표준화하고, 외주 및 내부 배경팀의 워크플로우를 정립했습니다."
     }
   },
@@ -118,6 +164,7 @@ let projects = [
     "category": "PC",
     "description": "대규모 FPS/TPS 프로젝트인 CrowZ에서 테크니컬 아티스트로 기여하며, PC 플랫폼을 대응하는 UE4 프로젝트에 참여했습니다.",
     "tags": [
+      "UE4",
       "C++",
       "HLSL",
       "MaxScript",
@@ -128,6 +175,12 @@ let projects = [
     ],
     "image": "src/images/corwz_02.jpg",
     "media": [
+      {
+        "type": "video",
+        "src": "https://www.youtube.com/watch?v=VXmOXHo7KfU",
+        "caption": "",
+        "description": ""
+      },
       {
         "type": "gallery",
         "src": "src/images/CustomDecal_01.PNG, src/images/CustomDecal_02.PNG, src/images/CustomDecal_03.PNG",
@@ -216,8 +269,8 @@ let projects = [
     "details": {
       "overview": "대규모 FPS/TPS 프로젝트인 CrowZ에서 테크니컬 아티스트로 기여하며, PC 플랫폼을 대응하는 UE4 프로젝트에 참여했습니다.",
       "responsibilities": [],
-      "technologies": "123",
-      "results": ""
+      "technologies": "C++, HLSL, MaxScript, Blueprint, Git, Jenkins, RenderDoc",
+      "results": "•\t배경 및 리얼리즘 FPS 구현을 위한 핵심 쉐이더를 제작하고 관리했습니다.\no\t프로젝트에 요구되는 대부분의 배경(Environment) 쉐이더를 설계 및 제작하여, 대규모 전장의 비주얼 퀄리티를 통일감 있게 끌어올렸습니다.\no\t사실적인 조준경 표현을 위해 Optic Shader를 제작했습니다. 고비용의 RenderTarget 대신 ScreenUV 연산을 활용하여 배율(Magnification)과 시차 보정(Parallax) 기능을 구현해 렌더링 성능을 최적화했습니다.\no\t반투명 재질(유리 등) 위에도 탄흔이 표시되도록 CustomDepth 기반의 Translucent Decal 시스템을 구현하여 디퍼드 데칼의 한계를 극복했습니다.\no\t탄흔 생성 시 잔열이 서서히 식는 표현을 위해, C++와 Curve Float를 연동하여 런타임에 Emissive 값이 자연스럽게 제어되는 Dynamic Impact Decal을 구축했습니다.\no\tFoliage의 자연스러운 움직임을 위해 Vertex Color와 파라미터 컬렉션을 활용한 Fake Wind 쉐이더를 제작하여 환경의 디테일을 높였습니다.\n\n•\t프로파일링을 통한 리소스 최적화 및 기술 이슈를 해결했습니다.\no\t프로파일링을 통해 병목 구간을 분석하고 리소스를 최적화했으며, 개발 중 발생하는 기술적 이슈를 검증하고 처리하여 안정적인 빌드 상태를 유지했습니다.\no\t광활한 오픈 필드 맵에서의 렌더링 성능 확보를 위해 HLOD(Hierarchical Level of Detail) 시스템을 적용하고 최적화하여, 원경 퀄리티를 유지하면서도 드로우 콜(Draw Call)을 효과적으로 제어했습니다.\no\t1인칭 시점에서 총기가 벽을 뚫고 보이는 현상을 방지하기 위해 Weapon Clipping 기능을 개발했습니다. BoundBox 정보를 기반으로 픽셀을 마스킹 처리하고, 불필요한 쉐이더 연산 비용을 절감했습니다.\no\t특수 전술 상황을 위한 Night Vision Post Process를 구현하고, 플레이어 컨트롤러(PlayerController) 입력과 머티리얼 파라미터를 연동하여 실시간 제어 환경을 마련했습니다.\n\n•\t아트 리소스 관리 파이프라인 설계 및 유틸리티 툴을 제공했습니다.\no\t아트 리소스 관리 및 업무 파이프라인을 설계하고, 아티스트를 대상으로 GIT 형상 관리 도구 기술 지원을 수행하여 협업 효율과 데이터 안정성을 확보했습니다.\no\t작업자들의 업무 효율 및 편의를 위해 Material Parameter Controller 등 에디터 툴을 제작하여, 다수의 머티리얼 인스턴스 파라미터나 텍스처를 일괄 변경할 수 있는 기능을 제공해 반복 작업을 획기적으로 줄였습니다.\no\t레벨 디자인 생산성을 높이기 위해 Spline 기반의 전봇대 자동 배치 툴(Electric Pole Tool)을 구현했습니다. 스플라인 경로에 따라 액터를 배치하고, 케이블(Cable) 컴포넌트가 소켓에 자동으로 연결되도록 자동화했습니다."
     }
   },
   {
@@ -229,6 +282,7 @@ let projects = [
     "category": "PC / PS4",
     "description": "Stylized 액션 어드벤처 프로젝트인 리틀 데빌 인사이드에서 테크니컬 아티스트로 기여하며, PS4와 PC 플랫폼을 대응하는 UE4 프로젝트에 참여했습니다.",
     "tags": [
+      "UE4",
       "HLSL",
       "Blueprint",
       "Perforce",
@@ -238,10 +292,10 @@ let projects = [
     "image": "src/images/ldi_02.jpg",
     "media": [],
     "details": {
-      "overview": "123",
+      "overview": "Stylized 액션 어드벤처 프로젝트인 리틀 데빌 인사이드에서 테크니컬 아티스트로 기여하며, PS4와 PC 플랫폼을 대응하는 UE4 프로젝트에 참여했습니다.",
       "responsibilities": [],
-      "technologies": "123",
-      "results": ""
+      "technologies": "HLSL, Blueprint, Perforce, Jenkins, RenderDoc",
+      "results": "•\t프로젝트의 스타일에 맞는 환경 구현을 위한 일부 쉐이더 및 리소스를 제작했습니다.\no\tWorld Machine을 활용하여 사실적인 랜드스케이프 지형을 제작하고, 프로젝트에 최적화된 지형 생성 파이프라인을 구축했습니다.\no\t실사적인 눈 표현을 위해 Deformation Snow(반응형 눈) 쉐이더를 구현했습니다. SceneCapture와 RenderTarget 스와핑 기법을 활용해 플레이어의 이동 궤적을 누적시켰으며, Distance Based Tessellation을 Camera가 아닌 Player Pos 기준으로 적용하여 테셀레이션 부하를 효율적으로 관리했습니다.\no\t프로젝트에 요구되는 일부 배경 쉐이더를 제작하고, 블루프린트를 활용한 기능 구현을 지원했습니다. 또한, 레벨 구성에 필요한 일부 프랍(Prop)을 직접 제작하여 리소스 생산에 기여했습니다.\n\n•\t프로파일링을 통한 병목 해결 및 기술 이슈를 지원했습니다.\no\tUE4 Profiler와 GPU Visualizer를 활용하여 GPU 병목 현상을 분석하고 해결했습니다. 특정 레벨(Snow Island)에서 발생한 프레임 저하 원인이 ShadowDepths에 있음을 규명하고, Directional Light의 과도한 Far Shadow Distance 수치를 조정하여 렌더링 퍼포먼스를 정상화했습니다.\no\t정기적인 프로파일링을 통해 리소스 최적화를 수행하고, 개발 중 발생하는 다양한 테크니컬 이슈를 검증 및 처리하여 안정적인 개발 환경을 지원했습니다.\n\n•\t아트 리소스 최적화 툴 및 업무 워크플로우를 설계했습니다.\no\t폴리지 렌더링 최적화를 위해 Billboard Generator를 자체 개발했습니다. Blueprint와 RenderTarget을 이용해 3D 메쉬를 2D 빌보드로 자동 변환하는 프로세스를 구축했으며, Unlit 쉐이더와 Material Parameter Collection을 연동하여 라이팅 연산 비용을 절감하면서도 자연스러운 조명 변화를 구현했습니다.\no\t배경팀을 위한 업무 워크플로우를 직접 설계하고 제공하여 팀 내 협업 효율을 높였으며, 작업자들의 업무 편의성을 위해 DCC 툴(3ds Max 등) 연동 스크립트 및 인하우스 아트 툴을 제작하여 반복 작업을 줄였습니다."
     }
   },
   {
@@ -253,6 +307,7 @@ let projects = [
     "category": "PC / Mobile",
     "description": "Stylized 탑 다운 슈터 프로젝트인 트러블 슈터에서 3D 배경 아티스트로 기여하며, 모바일과 PC 플랫폼을 대응하는 Unity 5 프로젝트에 참여했습니다.",
     "tags": [
+      "Unity 5",
       "C#",
       "HLSL"
     ],
@@ -284,10 +339,10 @@ let projects = [
       }
     ],
     "details": {
-      "overview": "123",
+      "overview": "Stylized 탑 다운 슈터 프로젝트인 트러블 슈터에서 3D 배경 아티스트로 기여하며, 모바일과 PC 플랫폼을 대응하는 Unity 5 프로젝트에 참여했습니다.",
       "responsibilities": [],
-      "technologies": "123",
-      "results": ""
+      "technologies": "3ds Max, Substance Painter, Photoshop, C#, HLSL, Unity 5",
+      "results": "•\t배경 에셋 제작 및 쉐이더를 구현했습니다.\no\t프로젝트의 아트 컨셉에 맞춰 3D 배경 에셋을 제작하고, 레벨 디자인에 필요한 리소스를 최적화하여 제공했습니다.\no\tHLSL을 활용하여 배경 제작에 필요한 커스텀 쉐이더를 직접 구현하고 적용하여, 엔진 상에서 의도한 비주얼 퀄리티를 완성했습니다.\n\n•\t게임 기능 구현 및 기술 지원을 수행했습니다.\no\tC# 스크립팅을 활용하여 간단한 프로토타입에 필요한 게임 플레이 기능을 직접 구현하고, 기획 의도를 검증하는 과정을 지원했습니다.\no\t모바일과 PC 멀티 플랫폼 환경을 고려하여 에셋 규격을 관리하고, 효율적인 제작 파이프라인을 유지했습니다."
     }
   },
   {
@@ -297,8 +352,9 @@ let projects = [
     "type": "personal",
     "date": "",
     "category": "Shader Development",
-    "description": "릴리프",
+    "description": "UE5 환경에서 Relief Mapping 셰이더를 구현하고 Parallax Occlusion Mapping과의 비교 분석.",
     "tags": [
+      "UE5",
       "HLSL"
     ],
     "image": "src/images/relief_01.jpg",
@@ -317,10 +373,10 @@ let projects = [
       }
     ],
     "details": {
-      "overview": "안녕하세요. 오늘은 표면 재질에 릴리프(Relief) 기법을 적용한 셰이더를 실험해 보았습니다.\n결과는 이전 데칼 작업과 유사했으며, 최적화에 대해서도 확인해 보았습니다.\n제 생각에는 프로젝트에서 디스플레이스먼트, 패럴랙스 오클루전 매핑(POM), 또는 릴리프 매핑과 함께 높이 텍스처를 사용하려는 경우, 릴리프 기법을 추천합니다.\n릴리프 기법은 버텍스 셰이더(테셀레이션)보다 효율적이고 빠르며 비용도 저렴합니다. 또한 POM보다 더 나은 시각적 품질을 얻을 수 있습니다. 하지만 패럴랙스 오클루전 매핑보다는 비용이 많이 든다는 점을 알아두셔야 합니다. 릴리프 기법은 레이 높이 필드 교차점을 계산하기 위해 두 번째 탐색을 통해 샘플링을 수행합니다.\n감사합니다.",
+      "overview": "UE5 환경에서 Relief Mapping 셰이더를 구현하고 테스트를 진행했습니다.\n\n테스트에서는 Relaxed Cone Stepping 방식을 채택하여 HLSL 코드로 작성하였으며, 이를 기존의 Parallax Occlusion Mapping (POM) 및 테셀레이션(Tessellation) 방식과 비교 분석했습니다.\n\n기술적 기반은 Ray와 Height Field(높이 맵)의 교차점을 탐색하는 알고리즘을 사용했으며,\n이 과정에서 GPU Gems 3 문헌에서 소개된 Relaxed Cone Stepping 방식을 적용했습니다.",
       "responsibilities": [],
       "technologies": "HLSL",
-      "results": ""
+      "results": "테스트 결과 Parallax Occlusion Mapping과 유사하지만 더욱 깊이감 있는 표면 묘사가 가능했습니다.\n\n프로젝트에서 Height Texture를 활용한 디스플레이스먼트(Displacement) 효과를 고려 중이라면, 각 방식의 장단점을 다음과 같이 정리할 수 있습니다.\n\nA. Relief Mapping vs Vertex Shader (Tessellation)\n성능: Relief Mapping은 테셀레이션을 사용하는 버텍스 셰이더 방식보다 훨씬 빠르고 연산 비용이 저렴합니다.\n효율성: 지오메트리를 실제로 분할하지 않고 픽셀 셰이더 단계에서 깊이감을 표현하므로 훨씬 효율적입니다.\n\nB. Relief Mapping vs Parallax Occlusion Mapping (POM)\n시각적 품질: Relief Mapping이 POM보다 더 뛰어난 시각적 품질을 보여줍니다. 특히 가파른 각도나 실루엣 처리에서 더 정확한 결과를 얻을 수 있습니다.\n비용: 품질이 높은 만큼 POM보다는 연산 비용이 비쌉니다.\n\n이에 대한 사유는 Relief Mapping은 Ray와 Height Field의 정확한 교차점을 찾기 위해 1차 탐색(Linear Search) 후, 2차 정밀 탐색(Binary Search 등)을 추가로 수행하는 샘플링 과정을 거치기 때문입니다.\n\n테스트 결과, POM보다 약간의 추가 비용이 들더라도 더 높은 퀄리티의 깊이감이 필요하거나, 테셀레이션의 무거운 비용을 피하고 싶은 경우 Relief Mapping을 사용하는 것을 추천합니다.\n\n참고 문헌 (References)\nRelaxed Cone Stepping for Relief Mapping: GPU Gems 3, Chapter 18\nhttps://developer.nvidia.com/gpugems/gpugems3/part-iii-rendering/chapter-18-relaxed-cone-stepping-relief-mapping"
     }
   },
   {
@@ -329,9 +385,12 @@ let projects = [
     "company": "",
     "type": "personal",
     "date": "",
-    "category": "Tools",
-    "description": "Easy LOD Edit Tool\n- Selections grouping\n- Selections ungroup\n- Creation LOD from a selected group\n- Break LOD group from selected\n- Completed filtered UCX Elements\n- Group name from LOD0\n",
-    "tags": [],
+    "category": "Tool Development",
+    "description": "3ds Max의 Script Tool인 Easy LOD Edit Tool에 대한 글입니다.",
+    "tags": [
+      "MaxScript",
+      "3ds Max"
+    ],
     "image": "src/images/maxscript_lodtool_01.jpg",
     "media": [
       {
@@ -342,7 +401,7 @@ let projects = [
       }
     ],
     "details": {
-      "overview": "MAXScript Works for 3D Artists\n- Selections grouping\n- Selections ungroup\n- Creation LOD from a selected group\n- Break LOD group from selected\n- Completed filtered UCX Elements\n- Group name from LOD0\n\nAvailable to download on Github:\nhttps://github.com/Fristet/MaxScripts\n\nlodTool.mcr\nlodTool.ms",
+      "overview": "3D 배경 아티스트의 업무를 진행하다 보면 만들어진 LOD 그룹을 해체하거나 다시 만들어야 할 경우가 있습니다.\n그런 경우를 위해 3ds Max의 불편한 인터페이스 반복 작업을 줄이기 위해 스크립트를 제작했습니다.\n\n- Selections grouping\n- Selections ungroup\n- Creation LOD from a selected group\n- Break LOD group from selected\n- Completed filtered UCX Elements\n- Group name from LOD0\n\nAvailable to download on Github:\nhttps://github.com/Fristet/MaxScripts\n\nlodTool.mcr\nlodTool.ms",
       "responsibilities": [],
       "technologies": "MaxScript",
       "results": ""
