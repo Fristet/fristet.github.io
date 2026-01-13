@@ -1,13 +1,178 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>fristet.github.io</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio">
+    <title>Hyundo Yoo | Senior Technical Artist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 헤더 -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <h1 class="logo-name">Hyundo Yoo</h1>
+                    <p class="logo-title">Senior Technical Artist</p>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="메뉴">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 메인 콘텐츠 -->
+    <main class="main-content">
+        <!-- 히어로 섹션 -->
+        <section id="home" class="hero">
+            <div class="hero-slider">
+                <div class="hero-slider-container" id="heroSlider">
+                    <!-- 슬라이더 아이템들이 JavaScript로 동적 생성됩니다 -->
+                </div>
+                <button class="slider-nav prev" id="prevSlide" aria-label="이전 프로젝트">
+                    <span>&lt;</span>
+                </button>
+                <button class="slider-nav next" id="nextSlide" aria-label="다음 프로젝트">
+                    <span>&gt;</span>
+                </button>
+                <div class="slider-dots" id="sliderDots"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title"></h2>
+                    <p class="hero-subtitle">Hyundo Yoo</p>
+                    <p class="hero-description">
+                        Senior Technical Artist
+                    </p>
+                    <a href="#projects" class="cta-button">프로젝트 보기</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 프로젝트 섹션 -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="professional">Professional</button>
+                    <button class="filter-btn" data-filter="personal">Personal</button>
+                </div>
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- 프로젝트 카드들이 JavaScript로 동적으로 생성됩니다 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About 섹션 -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>전문 분야</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <h4>셰이더 개발</h4>
+                                <p>HLSL을 활용한 고급 셰이더 프로그래밍</p>
+                            </div>
+                            <div class="skill-card">
+                                <h4>파이프라인 구축</h4>
+                                <p>Python, C++을 활용한 자동화 도구 개발</p>
+                            </div>
+                            <div class="skill-card">
+                                <h4>최적화</h4>
+                                <p>실시간 렌더링 성능 최적화 및 프로파일링</p>
+                            </div>
+                            <div class="skill-card">
+                                <h4>기술 지원</h4>
+                                <p>아티스트를 위한 기술 문서 작성 및 교육</p>
+                            </div>
+                        </div>
+                        <h3 class="tech-stack-title">기술 스택</h3>
+                        <div class="tech-tags">
+                            <span class="tag">Unreal Engine</span>
+                            <span class="tag">Unity</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Lua</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">HLSL</span>
+                            <span class="tag">Shell Script</span>
+                            <span class="tag">MaxScript</span>
+                            <span class="tag">3ds Max</span>
+                            <span class="tag">Photoshop</span>
+                            <span class="tag">Substance</span>
+                            <span class="tag">Git</span>
+                            <span class="tag">Perforce</span>
+                            <span class="tag">Jenkins</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact 섹션 -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <div class="contact-content">
+                    <p></p>
+                    <div class="contact-links">
+                        <a href="mailto:guseh7@gmail.com" class="contact-link">
+                            Email
+                        </a>
+                        <a href="https://github.com/fristet" class="contact-link" target="_blank" rel="noopener">
+                            GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/%ED%98%84%EB%8F%84-%EC%9C%A0-b95a0211a/" class="contact-link" target="_blank" rel="noopener">
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 프로젝트 상세 모달 -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="닫기">&times;</button>
+            <div class="modal-body" id="modalBody">
+                <!-- 프로젝트 상세 내용이 동적으로 삽입됩니다 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 이미지 라이트박스 모달 -->
+    <div id="imageLightbox" class="lightbox">
+        <button class="lightbox-close" aria-label="닫기">&times;</button>
+        <div class="lightbox-content">
+            <img id="lightboxImage" class="lightbox-image" src="" alt="">
+            <div class="lightbox-info" id="lightboxInfo">
+                <p class="lightbox-caption" id="lightboxCaption"></p>
+                <p class="lightbox-description" id="lightboxDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Hyundo Yoo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
