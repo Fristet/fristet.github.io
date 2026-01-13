@@ -1,7 +1,7 @@
 // [script.js]
 
 // ===== 프로젝트 데이터 =====
-[
+let projects = [
   {
     "id": 1768290589577,
     "title": "CINEV",
@@ -48,7 +48,9 @@
         "클라이언트 기능 제공",
         "플러그인 제작 및 포팅/컨버팅",
         "프로젝트 최적화",
-        "쉐이더 기술 지원"
+        "쉐이더 기술 지원",
+        "아웃소싱 커뮤니케이션 기술 지원",
+        "가이드라인 제공 및 교육"
       ],
       "technologies": "C++, Python, Shell, HLSL, Blueprint, Git, Perforce, GitLab, RenderDoc, Intel GPA",
       "results": "• 프로젝트 리소스 최적화 및 자동화 파이프라인을 구축하였습니다.\n    o 장기 개발로 인한 에디터 퍼포먼스 저하를 해결하기 위해 리소스 Validator 툴을 제작하였습니다.\n    o 중복 및 미사용 리소스를 전수 검사·제거하여 프로젝트 용량을 약 75% 경량화 (1TB → 260GB) 하였습니다.\n    o Git Hook과 Shell Script를 활용하여, 리소스 검증 및 정리 과정을 자동화 파이프 라인에 통합하였습니다.\n\n• 프로젝트 퍼포먼스 최적화를 통해 목표 프레임을 달성하였습니다.\n    o 렌더링 병목 구간 분석 및 최적화를 진행하여, 평균 20fps에서 60fps 이상으로 성능을 향상시켰습니다.\n    o [메모리] Texture Asset Validator 툴을 제작하여 객체의 Texel/Pixel Density를 조정하는 과정을 자동화하였고, 이를 통해 메모리 오버헤드 및 크래시 이슈를 사전에 차단하였습니다.\n    o [GPU] Nanite(Mesh Shader) 환경에서의 과도한 오버드로우를 방지하기 위해 엔진 레벨에서 별도의 Pre-pass Frustum/Occlusion Culling 로직을 구현하여 렌더링 효율을 극대화하였습니다. 또한 Pixel Shader에 거리 기반 LOD를 적용하여 연산 부하를 제어하였습니다.\n    o [CPU] Frustum/Occlusion Culling 적용으로 DrawCall을 최적화하였고, Hair/Cloth 시뮬레이션의 Bone LOD 및 Iteration을 시야 거리에 따라 동적으로 할당하여 연산 비용을 절감하였습니다. 추가로 UI 구조 설계의 병목 지점을 파악하고 코드를 수정하여 보완하였습니다.\n\n• R&D 및 개발 환경 효율화를 위한 파이프라인을 설계하였습니다.\n    o AD가 요구하는 비주얼 완성도를 위해 UE5 엔진 소스를 수정하여 독자적인 쉐이더 모델을 구현하였습니다.\n    o 컨셉 아트 제작 효율 증대를 위해 ComfyUI를 도입하고, 관련 파이프라인 설계 및 가이드라인 문서를 제공하였습니다.\n    o GitLab 기반의 CI/CD 파이프라인을 구축하여 커스텀 쉐이더 컴파일, 엔진 통합 테스트 및 배포 과정을 전면 자동화하였습니다.\n    o 3D 배경 및 캐릭터용 쉐이더를 설계하고, 아티스트를 위한 인하우스 툴 및 기술 가이드라인을 작성하여 배포하였습니다.\n    o Gaussian Splatting 도입을 위해 여러 시스템을 테스트하여 검증한 뒤, Volinga와의 협업을 진행하기 위해 커뮤니케이션을 담당하였습니다.\n    o UI에서의 기술적 구현이 필요한 기능과 Shader들의 제작하였습니다."
@@ -150,7 +152,16 @@
     ],
     "details": {
       "overview": "스타일리시 액션 프로젝트인 스텔라 블레이드에서 테크니컬 아티스트로 기여하며, PS5와 PC 플랫폼을 대응하는 UE4 프로젝트에 참여했습니다.",
-      "responsibilities": [],
+      "responsibilities": [
+        "기술 R&D",
+        "배경 기술 지원",
+        "UI 기술 지원",
+        "CI/CD 파이프라인 설계",
+        "프로젝트 최적화",
+        "쉐이더 기술 지원",
+        "아웃소싱 커뮤니케이션 기술 지원",
+        "가이드라인 제공 및 교육"
+      ],
       "technologies": "C++, Python, Shell, HLSL, MaxScript, Blueprint, Perforce, Jenkins, RenderDoc, AMD GPU Profiler",
       "results": "•\tPS5 플랫폼에 대한 대응을 진행했습니다.\no\tPS5와 PC 간의 상이한 칩셋의 쉐이더 컴파일 환경을 파악하고, PS5의 AMD 칩셋의 특성에 맞게 쉐이더를 수정하여 렌더링 안정성을 확보했습니다.\n\n•\t프로젝트의 세미 오픈월드 환경에 맞는 최적화를 통해 목표 프레임을 달성하였습니다.\no\t원경 디테일 유지와 퍼포먼스 확보를 위해 Imposter Baker 및 MassiveLOD Billboard 시스템 등을 활용 및 구현하여 적용했습니다.\no\t효율적인 렌더링과 CPU및 GPU 부하를 줄이기 위해 적극적으로 Section Instancing 시스템을 구현하여 적용하였습니다.\no\t일부 실시간 Light를 사용함에 있어 Shadow의 CPU및 GPU 부하를 줄이기 위해 Fake Shadow를 구현하여 적용했습니다.\no\t대량의 Foliage를 사용하는 환경에서 Foliage 리소스 제작 및 퀄리티 컨트롤, 최적화, Shader 최적화를 진행하였습니다.\no\tRenderDoc과 AMD GPU Profiler를 이용하여, PC와 PS5 플레이 환경에서의 GPU 병목을 파악하고 해결하였습니다.\no\tShader들의 Pixel 및 Vertex Shader에 Screen Size와 거리 기반의 LOD를 적용하여 연산 부하를 제어하였습니다.\n\n•\tAD가 요구하는 완성도를 위해 여러 기술적 지원을 하였습니다.\no\t카메라와 오브젝트 간의 간섭을 자연스럽게 처리하는 Dither Actor Component를 구현하여 카메라 전환 시의 시각적 이질감과 불편함을 최소화했습니다.\no\tUI 컴포넌트의 비주얼 적 완성도를 위해 UI 쉐이더들을 구현하여 적용했습니다.\no\t프로젝트에서 요구하는 비주얼 적 배경의 완성도를 위해 대부분의 배경 재질 쉐이더들을 구현하여 적용했습니다.\no\tRelief Mapping을 구현하여 Parallax Occlusion Mapping 불완전한 부분을 대체하고 퍼포먼스와 비주얼 적 완성도를 높였습니다.\no\t각종 특수한 효과들에 대한 쉐이더를 구현하여 환경에 맞는 효과적으로 완성도를 높였습니다.\n\n•\tJenkins 기반의 빌드 자동화로 개발 효율을 높였습니다.\no\tJenkins와 Shell Script를 활용한 Lightbuild Automation Tool을 개발하여, 라이팅 빌드 과정을 자동화하고 CI/CD 파이프라인에 통합하여 아티스트의 불필요한 대기 시간을 단축했습니다.\n\n•\t모션 캡쳐와 시네마틱 제작 환경을 구축하였습니다.\no\tCinematic 제작 시 Virtual Camera 등의 장비를 모션캡쳐 등에 활용할 수 있도록 관련 하드웨어 장비를 제작하고 환경을 구성하여 제공하였습니다.\n\n•\t애니메이션의 캐릭터와 환경 오브젝트 간의 인터렉션 기능을 구현하였습니다.\no\tAnimation의 인게임 환경 오브젝트 간의 인터렉션을 구현하고, 이 과정에서 Shader를 연동하여 보다 효과적인 시각적 효과를 완성하였습니다.\n\n•\t작업자의 에디터 사용 편의성을 높이기 위해 인하우스 툴을 제작하여 반복 작업을 줄이고 생산성을 향상시켰습니다.\no\t3ds Max에서 사용하기 위한 MaxScript 들과, 에디터 내에서 사용하는 여러 편의성 툴들을 개발하여 제공하였습니다.\n\n•\t협업 가이드 및 품질 표준을 수립했습니다.\no\tSony XDEV 팀과의 원활한 기술 협업을 위해 전용 가이드라인을 제작하고, 이슈 대응 및 기술 커뮤니케이션을 진행했습니다.\no\t외부의 아웃소싱 업체와의 원활한 기술 협업을 위해 가이드라인을 제작을 하고, 커뮤니케이션을 진행하였습니다.\no\tTexel Density 규약 수립 및 UVDensityVisualize 툴 개발을 통해 대규모 리소스 품질을 표준화하고, 외주 및 내부 배경팀의 워크플로우를 정립했습니다."
     }
