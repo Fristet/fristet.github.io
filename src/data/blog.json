@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "title": "첫 번째 블로그 글",
+    "slug": "first-post",
+    "excerpt": "이것은 첫 번째 블로그 글입니다.",
+    "content": "# 첫 번째 블로그 글\n\n블로그 글의 본문이 여기에 들어갑니다.\n\n## 소제목\n\n더 많은 내용을 작성할 수 있습니다.",
+    "date": "2026-01-10",
+    "author": "작성자",
+    "tags": ["blog", "시작"],
+    "thumbnail": "/images/blog1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "React 팁과 트릭",
+    "slug": "react-tips",
+    "excerpt": "React 개발 시 유용한 팁들을 소개합니다.",
+    "content": "# React 팁과 트릭\n\nReact 개발에 도움이 되는 팁들을 배워봅시다.",
+    "date": "2026-01-05",
+    "author": "작성자",
+    "tags": ["React", "JavaScript"],
+    "thumbnail": "/images/blog2.jpg"
+  }
+]

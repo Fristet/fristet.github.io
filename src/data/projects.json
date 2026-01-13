@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "내 첫 번째 프로젝트",
+    "description": "이것은 예제 프로젝트입니다.",
+    "image": "/images/project1.jpg",
+    "tags": ["React", "Web"],
+    "link": "#",
+    "date": "2026-01-01"
+  },
+  {
+    "id": 2,
+    "title": "두 번째 프로젝트",
+    "description": "또 다른 멋진 프로젝트입니다.",
+    "image": "/images/project2.jpg",
+    "tags": ["JavaScript", "Node.js"],
+    "link": "#",
+    "date": "2025-12-15"
+  }
+]
