@@ -7,7 +7,7 @@ let projects = [
     "title": "CINEV",
     "company": "Cinamon",
     "type": "professional",
-    "date": "2022.06 - Current",
+    "date": "2022.06 - 현재",
     "category": "PC / WEB",
     "description": "NPR과 PBR을 동시 대응하는 3D 시네마틱 생성 툴 프로젝트인 CineV에서 시니어 테크니컬 아티스트로 기여하며, PC와 Web 플랫폼을 대응하는 UE5 프로젝트에 참여했습니다.",
     "tags": [
@@ -677,8 +677,8 @@ function openProjectModal(projectId) {
         <div class="modal-header">
             <h2 class="modal-title">${project.title}</h2>
             <div class="project-meta-info">
-                ${project.company ? `<p class="project-company">🏢 ${project.company}</p>` : ''}
-                ${project.date ? `<p class="project-date">📅 ${project.date}</p>` : ''}
+                ${project.company ? `<p class="project-company">${project.company}</p>` : ''}
+                ${project.date ? `<p class="project-date">${project.date}</p>` : ''}
             </div>
             <div class="modal-meta">
                 <span class="project-category">${project.category}</span>
