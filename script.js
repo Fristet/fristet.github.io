@@ -23,7 +23,7 @@ let projects = [
       "RenderDoc",
       "Intel GPA"
     ],
-    "image": "src/images/cinev_01.png",
+    "image": "src/images/cinev/cinev_01.png",
     "media": [
       {
         "type": "video",
@@ -33,7 +33,7 @@ let projects = [
       },
       {
         "type": "image",
-        "src": "src/images/cinev_01.png",
+        "src": "src/images/cinev/cinev_01.png",
         "caption": "123",
         "description": "123123123"
       }
@@ -196,7 +196,7 @@ let projects = [
       "Jenkins",
       "RenderDoc"
     ],
-    "image": "src/images/corwz_02.jpg",
+    "image": "src/images/crowz/corwz_02.jpg",
     "media": [
       {
         "type": "video",
@@ -206,25 +206,25 @@ let projects = [
       },
       {
         "type": "gallery",
-        "src": "src/images/CustomDecal_01.PNG, src/images/CustomDecal_02.PNG, src/images/CustomDecal_03.PNG",
+        "src": "src/images/crowz/CustomDecal_01.PNG, src/images/crowz/CustomDecal_02.PNG, src/images/crowz/CustomDecal_03.PNG",
         "caption": "Decal  for Translucent Material",
         "description": "Translucent ( 반투명 ) 머테리얼에 사용하기 위한 목적으로 제작된 셰이더입니다.\n기존의 디퍼드 데칼은 SceneDepth 를 통해 프로젝션 박스와 겹치는 오브젝트의 뎁스를 가져와 그 사이의 픽셀에 텍스쳐를 렌더하는 방식입니다.\n하지만 반투명 머테리얼은 기본적으로 SceneDepth에 그릴 수 없음으로 자연스럽게 디퍼드 데칼을 사용 할 수 없습니다.\n그로 인해 탄흔이 남은 유리 등을 표현하기 위해서 스크린 스페이스 데칼의 구현 방식을 통해 기존의 SceneDepth 가 아닌 CustomDepth 를 통해 데칼을 샘플링 해주는 방식의 셰이더를 구현 하게 되었습니다."
       },
       {
         "type": "gallery",
-        "src": "src/images/CustomDecal_04.PNG, src/images/CustomDecal_05.PNG, src/images/CustomDecal_06.PNG",
+        "src": "src/images/crowz/CustomDecal_04.PNG, src/images/crowz/CustomDecal_05.PNG, src/images/crowz/CustomDecal_06.PNG",
         "caption": "Decal  for Translucent Material",
         "description": "반투명 머테리얼이 적용된 컴포넌트는 SceneDepth 에 렌더가 되지 않음으로 단일 메쉬로는 데칼을 표현 할 수 없습니다.\n그러므로 일부의 한정된 대상 ( 부숴지지 않는 ) 유리 등에 사용을 할 목적으로만 반투명 머테리얼이 적용 메쉬와 동일한 메쉬를 같은 좌표에 추가 한 후 Mainpass 에서 Render를 비활성화 한 후 CustomDepth 를 활성화 해 CustomDepth 상에만 렌더 되게 하였습니다.\n이를 통해 반투명 머테리얼에도 CustomDepth 를 통한 Screen Space Decal 을 렌더할 수 있게 하였습니다"
       },
       {
         "type": "gallery",
-        "src": "src/images/DecalEmissiveFade.gif, src/images/DecalEmissiveFade_05.PNG",
+        "src": "src/images/crowz/DecalEmissiveFade.gif, src/images/crowz/DecalEmissiveFade_05.PNG",
         "caption": "Impact Decal With Emissive Fade",
         "description": "런타임 중에 피격 데칼이 생성 된 후 잔열을 표현하기 위해 구현한 기능입니다.\n런타임 중에 생성 된 데칼 컴포넌트의 Scalar 파라미터를 현재의 Deltatime 에 따른 Curve Float 값으로 업데이트를 해주는 방식으로 구현을 하였습니다.\n단순한 기능이지만 해당 구현을 진행하면서 C++ 에서의 클래스 활용과 함수 호출 등을 숙지 할 수 있었습니다"
       },
       {
         "type": "gallery",
-        "src": "src/images/DecalEmissiveFade_01.PNG, src/images/DecalEmissiveFade_02.PNG, src/images/DecalEmissiveFade_03.PNG, src/images/DecalEmissiveFade_04.PNG",
+        "src": "src/images/crowz/DecalEmissiveFade_01.PNG, src/images/crowz/DecalEmissiveFade_02.PNG, src/images/crowz/DecalEmissiveFade_03.PNG, src/images/crowz/DecalEmissiveFade_04.PNG",
         "caption": "Impact Decal With Emissive Fade",
         "description": "DataTable의 Structure 에 CurveFloat 를 추가 한 후 C++ 내에서 해당 변수를 참조하여 CurveFloat의 값을 갱신 및 초기화 후 런타임 중에 생성된 Decal Component 에서 Dynamic Material Instance 의 Scalar 파라미터의 값을 현재 DeltaTime 의 갱신 및 누적을 통해 CurveFloat 내의 값을 받아 업데이트를 해주는 구현입니다."
       },
@@ -236,55 +236,55 @@ let projects = [
       },
       {
         "type": "gallery",
-        "src": "src/images/FakeWind_01.PNG, src/images/FakeWind_02.PNG, src/images/FakeWind_03.PNG",
+        "src": "src/images/crowz/FakeWind_01.PNG, src/images/crowz/FakeWind_02.PNG, src/images/crowz/FakeWind_03.PNG",
         "caption": "Fake Wind",
         "description": "Actor 블루프린트의 함수를 추가해 보다 쉽게 관리가 가능하게 하였으며, Actor 의 Forward Vector 와 각종 변수 등을 통해 Material 내의 파라미터를 제어 할 수 있게 하였습니다."
       },
       {
         "type": "gallery",
-        "src": "src/images/crowz_optic.gif, src/images/OpticShader_01.PNG",
+        "src": "src/images/crowz/crowz_optic.gif, src/images/crowz/OpticShader_01.PNG",
         "caption": "Optic Shader",
         "description": "플레이어의 몰입감을 증가 시켜줄 수 있는 Optic Shader 입니다.\n일반적인 FPS에서는 여러 이유로 인하여 많은 디테일들을 포기하곤 합니다.\n도트 사이트와 스코프 등의 사실적인 느낌을 표현하기 위해 시야와 경통간의 시차와 배율 등을 구현했습니다."
       },
       {
         "type": "gallery",
-        "src": "src/images/OpticShader_04.PNG, src/images/OpticShader_05.PNG",
+        "src": "src/images/crowz/OpticShader_04.PNG, src/images/crowz/OpticShader_05.PNG",
         "caption": "Optic Shader | Magnification",
         "description": "렌즈를 통해 투과 된 사물을 표현하기 위한 Magnification 기능입니다.\n부분적으로 배율이 적용된 표현을 하기 위해 ScreenUV를 활용하여 구현하였습니다.\nRenderTarget 을 사용을 하지 않음으로써 기존의 RenderTarget 을 사용한 방식보다 성능이 빠르고 효율적입니다."
       },
       {
         "type": "image",
-        "src": "src/images/OpticShader_03.PNG",
+        "src": "src/images/crowz/OpticShader_03.PNG",
         "caption": "Optic Shader | Magnification",
         "description": "사용된 노드는 위와 같습니다.\nSceneColor를 통해 현재 Render 되고있는 Scene을 Buffer로 통해 접근하여 SceneColor의 UV를 현재 ScreenUV 를 기준으로 계산해 가산 해주었습니다."
       },
       {
         "type": "gallery",
-        "src": "src/images/crowz_optic_06.png, src/images/crowz_optic_07.png",
+        "src": "src/images/crowz/crowz_optic_06.png, src/images/crowz/crowz_optic_07.png",
         "caption": "Optic Shader | Parallax",
         "description": "스코프 등의 렌즈를 통해 보이는 시차 보정을 표현하기 위한 Parallax 기능입니다.\n스크린 정 중앙의 기준으로 Mask 를 그려주는 방식을 사용하였으며 그로 인해 ScreenSize 와 ScreenUV 등을 활용하여 구현하였습니다.\n추가적으로 반동 등의 표현을 더욱 극대화 하기 위한 기능을 추가하였습니다."
       },
       {
         "type": "image",
-        "src": "src/images/OpticShader_02.PNG",
+        "src": "src/images/crowz/OpticShader_02.PNG",
         "caption": "Optic Shader | Parallax",
         "description": "사용된 노드는 위와 같습니다.\n현재의 ViewSize 를 통해 ScreenUV의 좌표를 계산해 준 뒤 ScreenUV 와 계산된 좌표를 기준으로 SphereMask 를 생성해주었습니다.\n이를 통해 Screen의 해상도에 영향을 받지 않는 마스크를 스크린 중앙에 생성해 주었으며 추가적으로 총기의 반동 등의 느낌을 더하기 위해\nCameraPos 와 Material 이 적용되는 Object 의 거리를 계산해 보간해 주고 곱 연산을 통해 마스크의 사이즈를 조정하였습니다."
       },
       {
         "type": "gallery",
-        "src": "src/images/Shader.PNG, src/images/WeaponClipping.gif",
+        "src": "src/images/crowz/Shader.PNG, src/images/crowz/WeaponClipping.gif",
         "caption": "Weapon Clipping",
         "description": "플레이 도중 플레이어의 총기 메쉬 등이 벽 등을 뚫고 반대편에 노출되는 현상을 막기 위해 구현을 진행하였습니다.\nWeapon의 Component 에서 BoundBox WorldPos 를 가져와 BoundBox 의 크기를 기준으로 Clipping을 하였으며 If 대신 Step 함수를 사용하여서 불필요한 연산을 감소하였습니다."
       },
       {
         "type": "gallery",
-        "src": "src/images/SettingWeaponMAT.PNG, src/images/SettingWeaponParam.PNG",
+        "src": "src/images/crowz/SettingWeaponMAT.PNG, src/images/crowz/SettingWeaponParam.PNG",
         "caption": "Weapon Clipping",
         "description": "무기의 Component 의 경우 Parts 별로 구분이 되어있어 ( Barrel, Recever, Body, Stock 등 ) 각 Parts 의 머테리얼 들을 Array 대입해\nDynamicMaterialInstnace(DMI) 를 생성해주고 해당 DMI 를 메쉬에 적용해주며 동시에 머테리얼의 파라미터를 초기화 하며 생성된 BoundBox의 Pos를 대입해줍니다."
       },
       {
         "type": "image",
-        "src": "src/images/SettingApprox.PNG",
+        "src": "src/images/crowz/SettingApprox.PNG",
         "caption": "Weapon Clipping",
         "description": "BoundBox의 Extend 를 기준으로 Mesh 의 ApproxSize 를 추출한 뒤 바운드 박스의 월드 좌표와 ApproxSize를 통해 총기의 BoundBox의 끝과 시작점을 알아내 SphereTrace를 생성해준 뒤\nSphereTrace의 HitResult 를 기반으로 Location 을 “ClippingOffset” 머테리얼 파라미터에 대입해주는 방식입니다."
       },
@@ -327,7 +327,7 @@ let projects = [
       "Jenkins",
       "RenderDoc"
     ],
-    "image": "src/images/ldi_02.jpg",
+    "image": "src/images/ldi/ldi_02.jpg",
     "media": [
       {
         "type": "video",
@@ -449,29 +449,29 @@ let projects = [
       "C#",
       "HLSL"
     ],
-    "image": "src/images/TS_main.png",
+    "image": "src/images/ts/TS_main.png",
     "media": [
       {
         "type": "image",
-        "src": "src/images/TS_01.png",
+        "src": "src/images/ts/TS_01.png",
         "caption": "",
         "description": ""
       },
       {
         "type": "image",
-        "src": "src/images/TS_02.png",
+        "src": "src/images/ts/TS_02.png",
         "caption": "",
         "description": ""
       },
       {
         "type": "image",
-        "src": "src/images/TS_03.png",
+        "src": "src/images/ts/TS_03.png",
         "caption": "",
         "description": ""
       },
       {
         "type": "image",
-        "src": "src/images/TS_04.png",
+        "src": "src/images/ts/TS_04.png",
         "caption": "",
         "description": ""
       }
@@ -498,17 +498,17 @@ let projects = [
       "UE5",
       "HLSL"
     ],
-    "image": "src/images/relief_01.jpg",
+    "image": "src/images/reliefmapping/relief_01.jpg",
     "media": [
       {
         "type": "gallery",
-        "src": "src/images/hyundo-yoo-compare-surface-01.gif, src/images/hyundo-yoo-compare-surface-02.gif, src/images/hyundo-yoo-compare-surface-03.gif, src/images/hyundo-yoo-compare-surface-04.gif",
+        "src": "src/images/reliefmapping/hyundo-yoo-compare-surface-01.gif, src/images/reliefmapping/hyundo-yoo-compare-surface-02.gif, src/images/reliefmapping/hyundo-yoo-compare-surface-03.gif, src/images/reliefmapping/hyundo-yoo-compare-surface-04.gif",
         "caption": "Used the same parameter values. Ray sample steps: 16",
         "description": "Basepass pixel instructions:\nStandard - 160 instructions\nPOM - 206 instructions\nRelief - 244 instructions"
       },
       {
         "type": "gallery",
-        "src": "src/images/hyundo-yoo-compare-01.gif, src/images/hyundo-yoo-compare-02.gif, src/images/hyundo-yoo-compare-03.gif",
+        "src": "src/images/reliefmapping/hyundo-yoo-compare-01.gif, src/images/reliefmapping/hyundo-yoo-compare-02.gif, src/images/reliefmapping/hyundo-yoo-compare-03.gif",
         "caption": "Used the same parameter values. Ray sample steps: 16",
         "description": "In POM method, can find little artifacts like a layering"
       }
@@ -532,11 +532,11 @@ let projects = [
       "MaxScript",
       "3ds Max"
     ],
-    "image": "src/images/maxscript_lodtool_01.jpg",
+    "image": "src/images/easylodtool/maxscript_lodtool_01.jpg",
     "media": [
       {
         "type": "video",
-        "src": "src/videos/maxscript_lodtool.mp4",
+        "src": "src/videos/easylodtool/maxscript_lodtool.mp4",
         "caption": "Demo",
         "description": ""
       }
