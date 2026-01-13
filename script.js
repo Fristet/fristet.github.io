@@ -359,11 +359,11 @@ function loadProjects() {
             console.log('프로젝트 로드 완료:', projects.length, '개');
         } catch (error) {
             console.error('프로젝트 데이터 로드 실패:', error);
-            projects = [];
+            // localStorage 파싱 실패 시 하드코딩된 데이터 유지
         }
     } else {
-        console.log('저장된 프로젝트가 없습니다. 관리자 페이지에서 프로젝트를 추가하세요.');
-        projects = [];
+        console.log('localStorage에 저장된 데이터가 없습니다. 하드코딩된 프로젝트를 사용합니다.');
+        // localStorage가 없으면 하드코딩된 projects 배열을 그대로 사용
     }
 }
 
