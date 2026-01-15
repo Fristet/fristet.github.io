@@ -1019,6 +1019,11 @@ function openProjectModal(projectId) {
 
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
+    
+    // 모달 스크롤을 최상단으로 이동
+    const modalContent = modal.querySelector('.modal-content');
+    if (modalContent) modalContent.scrollTop = 0;
+    if (modalBody) modalBody.scrollTop = 0;
 
     // 이미지 클릭 시 라이트박스 열기
     setTimeout(() => {
@@ -1041,6 +1046,10 @@ function openProjectModal(projectId) {
 function closeModal() {
     modal.classList.remove('active');
     document.body.style.overflow = 'auto';
+    // 모달 스크롤을 최상단으로 초기화
+    const modalContent = modal.querySelector('.modal-content');
+    if (modalContent) modalContent.scrollTop = 0;
+    if (modalBody) modalBody.scrollTop = 0;
 }
 
 modalClose.addEventListener('click', closeModal);
