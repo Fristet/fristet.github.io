@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fristet.github.io/sitemap.xml
