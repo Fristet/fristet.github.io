@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1768584851313,
+    "title": "[샘플]테크니컬 아티스트의 취업",
+    "category": "Technical Art",
+    "date": "2026-01-17",
+    "tags": [
+      "ETC"
+    ],
+    "thumbnail": "src/images/sb/sb_02.webp",
+    "published": true,
+    "excerpt": "테크니컬 아티스트의 취업에 대해 생각해본 고촬입니다.테크니컬 아티스트의 취업에 대해 생각해본 고촬입니다.",
+    "content": "테스트 첫 문단\n![](src/images/sb/sb_02.webp) ![캡션 있음](src/images/sb/sb_02.webp)\n이미지 아래 오는 텍스트\n## 섹션 제목\n@[youtube](https://www.youtube.com/watch?v=5uOzUQNeSvs)"
+  }
+]

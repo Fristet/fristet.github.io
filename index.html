@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio">
+    <meta name="google-site-verification" content="f_mxJ50ZRR9UQsj7Ht9HckPFMpginmSAhFOJfOyVuwg" />
     <title>Hyundo Yoo | Senior Technical Artist</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- 헤더 -->
@@ -18,9 +20,12 @@
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#work" class="nav-link">Work</a></li>
+                    <li><a href="#blog" class="nav-link">Blog</a></li>
+                <!--
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
+                -->
                 </ul>
                 <button class="mobile-menu-toggle" aria-label="메뉴">
                     <span></span>
@@ -33,8 +38,10 @@
 
     <!-- 메인 콘텐츠 -->
     <main class="main-content">
-        <!-- 히어로 섹션 -->
-        <section id="home" class="hero">
+        <!-- 메인 뷰 (Home, Work, About, Contact) -->
+        <div id="mainView" class="content-view active">
+            <!-- 히어로 섹션 -->
+            <section id="home" class="hero">
             <div class="hero-slider">
                 <div class="hero-slider-container" id="heroSlider">
                     <!-- 슬라이더 아이템들이 JavaScript로 동적 생성됩니다 -->
@@ -50,19 +57,19 @@
             <div class="container">
                 <div class="hero-content">
                     <h2 class="hero-title">HYUNDO YOO</h2>
-                    <p class="hero-subtitle">SENIOR TECHNICAL ARTIST</p>
+                    <p class="hero-subtitle">Senior Technical Artist</p>
                     <p class="hero-description">
                         
                     </p>
-                    <a href="#projects" class="cta-button">View Portfolio</a>
+                    <a href="#work" class="cta-button">View Portfolio</a>
                 </div>
             </div>
         </section>
 
         <!-- 프로젝트 섹션 -->
-        <section id="projects" class="projects">
+        <section id="work" class="projects">
             <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
+                <h2 class="section-title">Work</h2>
                 <div class="project-filters">
                     <button class="filter-btn active" data-filter="all">All</button>
                     <button class="filter-btn" data-filter="professional">Professional</button>
@@ -150,6 +157,90 @@
                 </div>
             </div>
         </section>
+        </div>
+        
+        <!-- 블로그 뷰 -->
+        <div id="blogView" class="content-view">
+            <!-- 블로그 히어로 섹션 -->
+            <section class="blog-hero">
+                <div class="container">
+                    <div class="blog-hero-content">
+                        <h2 class="blog-hero-title">Blog</h2>
+                        <p class="blog-hero-description">
+                            Technical art insights, shader development tutorials, and Unreal Engine tips from a technical artist's perspective.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="blog" class="blog">
+                <div class="container">
+                    <h2 class="section-title" style="display: none;">Blog</h2>
+                    
+                    <div class="blog-layout">
+                        <!-- 메인 콘텐츠 -->
+                        <div class="blog-main">
+                            <!-- 블로그 포스트 목록 -->
+                            <div id="blogListView">
+                                <div class="blog-posts" id="blogGrid">
+                                    <!-- 블로그 포스트들이 JavaScript로 동적으로 생성됩니다 -->
+                                </div>
+                                <div class="pagination" id="blogPagination">
+                                    <!-- 페이지네이션이 JavaScript로 동적으로 생성됩니다 -->
+                                </div>
+                            </div>
+                            
+                            <!-- 블로그 포스트 상세 -->
+                            <div id="blogDetailView" style="display: none;">
+                                <button class="back-to-list-btn" onclick="closeBlogDetail()">←</button>
+                                <div id="blogDetailContent">
+                                    <!-- 블로그 포스트 상세 내용이 동적으로 생성됩니다 -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 사이드바 -->
+                        <aside class="blog-sidebar">
+                            <!-- 프로필 -->
+                            <div class="sidebar-widget">
+                                <div class="profile-widget">
+                                    <div class="profile-image">
+                                        <img src="src/images/profile.jpg" alt="Profile" onerror="this.style.display='none'">
+                                    </div>
+                                    <p class="profile-description">
+                                        This blog focuses on shader and blueprint development in Unreal Engine 4 from a tech artist's perspective. The goal is to help other artists grasp more advanced technical concepts through examples.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Featured Posts -->
+                            <div class="sidebar-widget">
+                                <h3 class="widget-title">RECENTLY POSTS</h3>
+                                <div class="featured-posts" id="featuredPosts">
+                                    <!-- Featured posts가 JavaScript로 동적으로 생성됩니다 -->
+                                </div>
+                            </div>
+                            
+                            <!-- Categories -->
+                            <div class="sidebar-widget">
+                                <h3 class="widget-title">CATEGORIES</h3>
+                                <div class="blog-filters" id="categoriesWidget">
+                                    <!-- Categories가 JavaScript로 동적으로 생성됩니다 -->
+                                </div>
+                            </div>
+                            
+                            <!-- Tags -->
+                            <div class="sidebar-widget">
+                                <h3 class="widget-title">TAGS</h3>
+                                <div class="tags-widget" id="tagsWidget">
+                                    <!-- Tags가 JavaScript로 동적으로 생성됩니다 -->
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
     <!-- 프로젝트 상세 모달 -->
@@ -177,7 +268,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Hyundo Yoo. All rights reserved.</p>
+            <p>&copy; 2026 Hyundo Yoo. All rights reserved. | Email: guseh7@gmail.com</p>
         </div>
     </footer>
 
