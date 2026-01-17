@@ -1,0 +1,138 @@
+/* Giscus Custom Dark Theme - Portfolio Matching */
+
+main {
+  --color-prettylights-syntax-comment: #808080;
+  --color-prettylights-syntax-constant: #e5e5e5;
+  --color-prettylights-syntax-entity: #cccccc;
+  --color-prettylights-syntax-storage-modifier-import: #ffffff;
+  --color-prettylights-syntax-entity-tag: #cccccc;
+  --color-prettylights-syntax-keyword: #ffffff;
+  --color-prettylights-syntax-string: #b3b3b3;
+  --color-prettylights-syntax-variable: #e5e5e5;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #808080;
+  --color-prettylights-syntax-invalid-illegal-text: #ffffff;
+  --color-prettylights-syntax-invalid-illegal-bg: #333333;
+  --color-prettylights-syntax-carriage-return-text: #ffffff;
+  --color-prettylights-syntax-carriage-return-bg: #333333;
+  --color-prettylights-syntax-string-regexp: #b3b3b3;
+  --color-prettylights-syntax-markup-list: #e5e5e5;
+  --color-prettylights-syntax-markup-heading: #ffffff;
+  --color-prettylights-syntax-markup-italic: #e5e5e5;
+  --color-prettylights-syntax-markup-bold: #ffffff;
+  --color-prettylights-syntax-markup-deleted-text: #b3b3b3;
+  --color-prettylights-syntax-markup-deleted-bg: #333333;
+  --color-prettylights-syntax-markup-inserted-text: #e5e5e5;
+  --color-prettylights-syntax-markup-inserted-bg: #333333;
+  --color-prettylights-syntax-markup-changed-text: #cccccc;
+  --color-prettylights-syntax-markup-changed-bg: #333333;
+  --color-prettylights-syntax-markup-ignored-text: #808080;
+  --color-prettylights-syntax-markup-ignored-bg: #333333;
+  --color-prettylights-syntax-meta-diff-range: #cccccc;
+  --color-primer-fg-disabled: #808080;
+  --color-primer-canvas-default: #171717;
+  --color-primer-canvas-subtle: #0a0a0a;
+  --color-primer-border-default: #333333;
+  --color-primer-border-muted: rgba(255, 255, 255, 0.1);
+  --color-neutral-muted: rgba(255, 255, 255, 0.05);
+  --color-accent-fg: #ffffff;
+  --color-accent-emphasis: #e5e5e5;
+  --color-attention-subtle: rgba(255, 255, 255, 0.05);
+  --color-danger-fg: #b3b3b3;
+
+  /* Main colors - 웹사이트 배경색 매칭 */
+  --color-canvas-default: #171717;
+  --color-canvas-subtle: #0a0a0a;
+  --color-border-default: #333333;
+  --color-border-muted: rgba(255, 255, 255, 0.1);
+  
+  /* Text colors - 웹사이트 텍스트 색상 매칭 */
+  --color-fg-default: #ffffff;
+  --color-fg-muted: #b3b3b3;
+  --color-fg-subtle: #808080;
+  
+  /* Button colors */
+  --color-btn-text: #ffffff;
+  --color-btn-bg: #0a0a0a;
+  --color-btn-border: #333333;
+  --color-btn-hover-bg: #171717;
+  --color-btn-hover-border: rgba(255, 255, 255, 0.2);
+  --color-btn-active-bg: #1f1f1f;
+  --color-btn-active-border: rgba(255, 255, 255, 0.3);
+  --color-btn-primary-bg: #ffffff;
+  --color-btn-primary-text: #171717;
+  --color-btn-primary-hover-bg: #e5e5e5;
+  
+  /* Input colors */
+  --color-input-bg: #0a0a0a;
+  --color-input-border: #333333;
+  --color-input-contrast-bg: #000000;
+  
+  /* Link colors */
+  --color-accent-fg: #ffffff;
+  
+  /* Shadow */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+
+/* 추가 커스터마이징 */
+.gsc-comment-box-main,
+.gsc-comment-box-write {
+  background-color: #0a0a0a !important;
+  border-color: #333333 !important;
+}
+
+.gsc-comment {
+  background-color: #0a0a0a !important;
+  border-color: #333333 !important;
+}
+
+.gsc-comment:hover {
+  background-color: #171717 !important;
+}
+
+.gsc-reply-box {
+  background-color: #000000 !important;
+  border-color: #333333 !important;
+}
+
+/* 버튼 스타일 */
+.gsc-upvote-count,
+.gsc-reply-count {
+  color: #b3b3b3 !important;
+}
+
+.gsc-upvote-count:hover,
+.gsc-reply-count:hover {
+  color: #ffffff !important;
+}
+
+/* 입력 필드 */
+textarea.form-control {
+  background-color: #0a0a0a !important;
+  border-color: #333333 !important;
+  color: #ffffff !important;
+}
+
+textarea.form-control:focus {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 스크롤바 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #404040;
+}

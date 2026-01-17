@@ -1790,3 +1790,57 @@ section {
         font-size: 0.75rem;
     }
 }
+
+/* ===========================
+   Giscus 댓글 시스템 스타일
+   =========================== */
+
+.blog-post-comments {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.blog-post-comments h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+#giscus-container {
+    margin-top: 2rem;
+}
+
+/* Giscus 다크 테마 커스터마이징 */
+.giscus,
+.giscus-frame {
+    width: 100%;
+    border: none;
+}
+
+/* Giscus 컨테이너 배경 */
+#giscus-container .giscus {
+    background: transparent;
+}
+
+/* Giscus 전체 테마 오버라이드 */
+:root {
+    --giscus-background: #171717;
+    --giscus-text: #e5e5e5;
+    --giscus-border: rgba(255, 255, 255, 0.1);
+    --giscus-primary: #ffffff;
+    --giscus-link: #60a5fa;
+}
+
+/* 반응형: 모바일 */
+@media (max-width: 768px) {
+    .blog-post-comments {
+        margin-top: 3rem;
+        padding-top: 2rem;
+    }
+    
+    .blog-post-comments h3 {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+}

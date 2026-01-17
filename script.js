@@ -868,11 +868,18 @@ function openBlogPost(id) {
                 </div>
             </div>
         ` : ''}
+        <div class="blog-post-comments">
+            <h3>Comments</h3>
+            <div id="giscus-container"></div>
+        </div>
     `;
 
     // 목록 숨기고 상세 보이기
     listView.style.display = 'none';
     detailView.style.display = 'block';
+    
+    // giscus 댓글 로드
+    loadGiscusComments(post.id, post.title);
     
     // URL 변경 (history API 사용)
     const newUrl = `#blog/${id}`;
@@ -889,6 +896,39 @@ function openBlogPost(id) {
             window.scrollTo({ top: elementPosition - offset, behavior: 'smooth' });
         }
     }, 50);
+}
+
+// giscus 댓글 시스템 로드
+function loadGiscusComments(postId, postTitle) {
+    const container = document.getElementById('giscus-container');
+    if (!container) return;
+    
+    // 기존 스크립트 제거
+    container.innerHTML = '';
+    const existingScript = document.querySelector('script[src*="giscus"]');
+    if (existingScript) {
+        existingScript.remove();
+    }
+    
+    // giscus 스크립트 생성
+    const script = document.createElement('script');
+    script.src = 'https://giscus.app/client.js';
+    script.setAttribute('data-repo', 'Fristet/fristet.github.io');
+    script.setAttribute('data-repo-id', 'R_kgDOODrdFg');
+    script.setAttribute('data-category', 'Comments');
+    script.setAttribute('data-category-id', 'DIC_kwDOODrdFs4C1FWF');
+    script.setAttribute('data-mapping', 'specific');
+    script.setAttribute('data-term', `blog-post-${postId}`);
+    script.setAttribute('data-strict', '0');
+    script.setAttribute('data-reactions-enabled', '1');
+    script.setAttribute('data-emit-metadata', '0');
+    script.setAttribute('data-input-position', 'bottom');
+    script.setAttribute('data-theme', 'https://fristet.github.io/giscus-theme.css');
+    script.setAttribute('data-lang', 'ko');
+    script.crossOrigin = 'anonymous';
+    script.async = true;
+    
+    container.appendChild(script);
 }
 
 // 블로그 상세에서 목록으로 돌아가기
