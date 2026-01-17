@@ -663,11 +663,6 @@ function highlightNavigation() {
 
 window.addEventListener('scroll', highlightNavigation);
 
-// ===== 우클릭 방지 =====
-document.addEventListener('contextmenu', (e) => {
-    e.preventDefault();
-});
-
 // ===========================
 // 블로그 관리
 // ===========================
