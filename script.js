@@ -878,6 +878,12 @@ function openBlogPost(id) {
     listView.style.display = 'none';
     detailView.style.display = 'block';
     
+    // SEO 메타 태그 업데이트
+    updateMetaTags(post);
+    
+    // 구조화된 데이터 추가
+    addStructuredData(post);
+    
     // giscus 댓글 로드
     loadGiscusComments(post.id, post.title);
     
@@ -896,6 +902,108 @@ function openBlogPost(id) {
             window.scrollTo({ top: elementPosition - offset, behavior: 'smooth' });
         }
     }, 50);
+}
+
+// SEO 메타 태그 업데이트
+function updateMetaTags(post) {
+    const siteUrl = 'https://fristet.github.io';
+    const postUrl = `${siteUrl}/#blog/${post.id}`;
+    const title = `${post.title} | Hyundo Yoo`;
+    const description = post.excerpt || post.content.substring(0, 160).replace(/<[^>]+>/g, '');
+    const image = post.thumbnail || `${siteUrl}/images/og-image.jpg`;
+    
+    // Title 태그
+    document.getElementById('page-title').textContent = title;
+    document.getElementById('meta-title').setAttribute('content', title);
+    
+    // Description
+    document.getElementById('meta-description').setAttribute('content', description);
+    
+    // Open Graph
+    document.getElementById('og-type').setAttribute('content', 'article');
+    document.getElementById('og-url').setAttribute('content', postUrl);
+    document.getElementById('og-title').setAttribute('content', title);
+    document.getElementById('og-description').setAttribute('content', description);
+    document.getElementById('og-image').setAttribute('content', image);
+    
+    // Twitter Card
+    document.getElementById('twitter-url').setAttribute('content', postUrl);
+    document.getElementById('twitter-title').setAttribute('content', title);
+    document.getElementById('twitter-description').setAttribute('content', description);
+    document.getElementById('twitter-image').setAttribute('content', image);
+    
+    // Canonical URL
+    document.getElementById('canonical-url').setAttribute('href', postUrl);
+}
+
+// 메타 태그 원래대로 복원
+function resetMetaTags() {
+    const siteUrl = 'https://fristet.github.io';
+    const defaultTitle = 'Hyundo Yoo | Senior Technical Artist';
+    const defaultDescription = 'Technical Artist Portfolio and Dev Blog.';
+    const defaultImage = `${siteUrl}/images/og-image.jpg`;
+    
+    document.getElementById('page-title').textContent = defaultTitle;
+    document.getElementById('meta-title').setAttribute('content', defaultTitle);
+    document.getElementById('meta-description').setAttribute('content', defaultDescription);
+    
+    document.getElementById('og-type').setAttribute('content', 'website');
+    document.getElementById('og-url').setAttribute('content', siteUrl);
+    document.getElementById('og-title').setAttribute('content', defaultTitle);
+    document.getElementById('og-description').setAttribute('content', defaultDescription);
+    document.getElementById('og-image').setAttribute('content', defaultImage);
+    
+    document.getElementById('twitter-url').setAttribute('content', siteUrl);
+    document.getElementById('twitter-title').setAttribute('content', defaultTitle);
+    document.getElementById('twitter-description').setAttribute('content', defaultDescription);
+    document.getElementById('twitter-image').setAttribute('content', defaultImage);
+    
+    document.getElementById('canonical-url').setAttribute('href', siteUrl);
+}
+
+// 구조화된 데이터 추가 (JSON-LD)
+function addStructuredData(post) {
+    // 기존 구조화된 데이터 제거
+    removeStructuredData();
+    
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": post.title,
+        "description": post.excerpt || post.content.substring(0, 160).replace(/<[^>]+>/g, ''),
+        "image": post.thumbnail || 'https://fristet.github.io/images/og-image.jpg',
+        "author": {
+            "@type": "Person",
+            "name": "Hyundo Yoo",
+            "jobTitle": "Senior Technical Artist"
+        },
+        "publisher": {
+            "@type": "Person",
+            "name": "Hyundo Yoo"
+        },
+        "datePublished": post.date,
+        "dateModified": post.date,
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": `https://fristet.github.io/#blog/${post.id}`
+        },
+        "keywords": post.tags ? post.tags.join(', ') : '',
+        "articleSection": post.category
+    };
+    
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = 'structured-data';
+    script.textContent = JSON.stringify(structuredData);
+    document.head.appendChild(script);
+}
+
+// 구조화된 데이터 제거
+function removeStructuredData() {
+    const existingData = document.getElementById('structured-data');
+    if (existingData) {
+        existingData.remove();
+    }
 }
 
 // giscus 댓글 시스템 로드
@@ -939,6 +1047,12 @@ function closeBlogDetail() {
     if (listView && detailView) {
         listView.style.display = 'block';
         detailView.style.display = 'none';
+        
+        // 메타 태그 원래대로 복원
+        resetMetaTags();
+        
+        // 구조화된 데이터 제거
+        removeStructuredData();
         
         // URL을 블로그 메인으로 복원
         if (window.location.hash !== '#blog') {
