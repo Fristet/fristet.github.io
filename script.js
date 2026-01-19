@@ -3,6 +3,165 @@
 // ===== 프로젝트 데이터 =====
 let projects = [];
 let blogPosts = [];
+let resumeData = null;
+
+// ===== Resume 데이터 로드 =====
+async function loadResumeData() {
+    // 먼저 localStorage에서 로드
+    const saved = localStorage.getItem('resumeData');
+    if (saved) {
+        try {
+            resumeData = JSON.parse(saved);
+        } catch (e) {
+            console.error('Resume 데이터 로드 실패:', e);
+        }
+    }
+    
+    // resume.json 파일이 있으면 fetch로 로드
+    try {
+        const response = await fetch('files/resume.json');
+        if (response.ok) {
+            const jsonData = await response.json();
+            resumeData = jsonData;
+            // localStorage에도 저장
+            localStorage.setItem('resumeData', JSON.stringify(resumeData));
+        }
+    } catch (e) {
+        // resume.json 파일이 없으면 localStorage 데이터 사용
+        console.log('resume.json 파일이 없습니다. localStorage 데이터를 사용합니다.');
+    }
+    
+    if (resumeData) {
+        renderResume();
+    }
+}
+
+function renderResume() {
+    if (!resumeData) return;
+    
+    // PDF 다운로드 버튼 이벤트 설정
+    const pdfDownloadBtn = document.getElementById('resumePdfDownload');
+    if (pdfDownloadBtn) {
+        pdfDownloadBtn.onclick = generateResumePDF;
+    }
+    
+    // Description
+    const descriptionContainer = document.getElementById('resumeDescriptionText');
+    if (descriptionContainer && resumeData.description) {
+        descriptionContainer.innerHTML = `<p>${resumeData.description}</p>`;
+    }
+    
+    // Experience 렌더링
+    const experienceContainer = document.getElementById('resumeExperience');
+    if (experienceContainer && resumeData.experience) {
+        experienceContainer.innerHTML = resumeData.experience.map(exp => `
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h4 class="timeline-title">${exp.title || ''}</h4>
+                        <span class="timeline-company">${exp.company || ''}</span>
+                    </div>
+                    <span class="timeline-period">${exp.period || ''}</span>
+                    <p class="timeline-description">${exp.description || ''}</p>
+                </div>
+            </div>
+        `).join('');
+    }
+    
+    // Education 렌더링
+    const educationContainer = document.getElementById('resumeEducation');
+    if (educationContainer && resumeData.education) {
+        educationContainer.innerHTML = resumeData.education.map(edu => `
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h4 class="timeline-title">${edu.title || ''}</h4>
+                        <span class="timeline-company">${edu.school || ''}</span>
+                    </div>
+                    <span class="timeline-period">${edu.period || ''}</span>
+                    <p class="timeline-description">${edu.description || ''}</p>
+                </div>
+            </div>
+        `).join('');
+    }
+    
+    // Projects 렌더링
+    const projectsContainer = document.getElementById('resumeProjects');
+    if (projectsContainer && resumeData.resumeProjects) {
+        projectsContainer.innerHTML = resumeData.resumeProjects.map(proj => `
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h4 class="timeline-title">${proj.title || ''}</h4>
+                        <span class="timeline-company">${proj.role || ''}</span>
+                    </div>
+                    <span class="timeline-period">${proj.period || ''}</span>
+                    <p class="timeline-description">${proj.description || ''}</p>
+                    ${proj.technologies ? `
+                        <div class="project-technologies">
+                            ${proj.technologies.split(',').map(tech => 
+                                `<span class="tech-tag">${tech.trim()}</span>`
+                            ).join('')}
+                        </div>
+                    ` : ''}
+                </div>
+            </div>
+        `).join('');
+    }
+    
+    // Skills 렌더링
+    if (resumeData.skills) {
+        const skillsMapping = {
+            gameEngines: 'skillsGameEngines',
+            programming: 'skillsProgramming',
+            shading: 'skillsShading',
+            dccTools: 'skillsDccTools'
+        };
+        
+        Object.keys(skillsMapping).forEach(key => {
+            const container = document.getElementById(skillsMapping[key]);
+            if (container && resumeData.skills[key]) {
+                const skills = resumeData.skills[key].split(',').map(s => s.trim()).filter(s => s);
+                container.innerHTML = skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('');
+            }
+        });
+    }
+    
+    // Certifications 렌더링
+    const certificationsContainer = document.getElementById('resumeCertifications');
+    if (certificationsContainer && resumeData.certifications) {
+        certificationsContainer.innerHTML = resumeData.certifications.map(cert => `
+            <div class="achievement-item">
+                <h4>${cert.title || ''}</h4>
+                <p class="achievement-issuer">${cert.issuer || ''} · ${cert.date || ''}</p>
+            </div>
+        `).join('');
+    }
+}
+
+// Resume를 PDF로 변환하여 다운로드
+function generateResumePDF() {
+    // 현재 페이지가 Resume 뷰인지 확인
+    const resumeView = document.getElementById('resumeView');
+    if (!resumeView || !resumeView.classList.contains('active')) {
+        alert('Resume 페이지에서만 PDF를 다운로드할 수 있습니다.');
+        return;
+    }
+
+    // body에 print 클래스 추가 (인쇄용 스타일 적용)
+    document.body.classList.add('printing-resume');
+    
+    // 인쇄 대화상자 열기
+    window.print();
+    
+    // 인쇄 후 클래스 제거
+    setTimeout(() => {
+        document.body.classList.remove('printing-resume');
+    }, 1000);
+}
 
 // ===== URL 기반 블로그 포스트 열기 =====
 function checkBlogUrlAndOpenPost() {
@@ -104,7 +263,7 @@ function loadProjects() {
 
 // JSON 파일에서 프로젝트 데이터 로드
 function loadProjectsFromJSON() {
-    fetch('projects.json')
+    fetch('files/projects.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('JSON 파일을 찾을 수 없습니다.');
@@ -692,7 +851,7 @@ function loadBlogPosts() {
 
 // JSON 파일에서 블로그 포스트 로드
 function loadBlogPostsFromJSON() {
-    fetch('blog.json')
+    fetch('files/blog.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('blog.json 파일을 찾을 수 없습니다.');
@@ -1285,6 +1444,7 @@ function changeTagPage(page, tag) {
 document.addEventListener('DOMContentLoaded', () => {
     loadProjects();
     loadBlogPosts();
+    loadResumeData();
     renderHeroSlider();
     renderProjects();
     renderBlogPosts();
@@ -1328,6 +1488,7 @@ function setupViewSwitching() {
     const navLinks = document.querySelectorAll('.nav-link');
     const mainView = document.getElementById('mainView');
     const blogView = document.getElementById('blogView');
+    const resumeView = document.getElementById('resumeView');
     
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
@@ -1337,10 +1498,14 @@ function setupViewSwitching() {
             navLinks.forEach(l => l.classList.remove('active'));
             link.classList.add('active');
             
+            // 모든 뷰 숨기기
+            mainView.classList.remove('active');
+            blogView.classList.remove('active');
+            if (resumeView) resumeView.classList.remove('active');
+            
             // 뷰 전환
             if (href === '#blog') {
                 e.preventDefault();
-                mainView.classList.remove('active');
                 blogView.classList.add('active');
                 
                 // 블로그 상세페이지가 열려있으면 닫기
@@ -1352,10 +1517,13 @@ function setupViewSwitching() {
                 }
                 
                 window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else if (href === '#resume') {
+                e.preventDefault();
+                if (resumeView) resumeView.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             } else if (href.startsWith('#')) {
                 // 메인 뷰의 섹션으로 이동
                 mainView.classList.add('active');
-                blogView.classList.remove('active');
                 
                 // Home 메뉴 클릭 시 맨 위로 스크롤
                 if (href === '#home') {
@@ -1371,11 +1539,24 @@ function setupViewSwitching() {
     if (hash === '#blog' || hash.startsWith('#blog/')) {
         mainView.classList.remove('active');
         blogView.classList.add('active');
+        if (resumeView) resumeView.classList.remove('active');
         
         // 네비게이션 활성화
         navLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === '#blog') {
+                link.classList.add('active');
+            }
+        });
+    } else if (hash === '#resume') {
+        mainView.classList.remove('active');
+        blogView.classList.remove('active');
+        if (resumeView) resumeView.classList.add('active');
+        
+        // 네비게이션 활성화
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#resume') {
                 link.classList.add('active');
             }
         });

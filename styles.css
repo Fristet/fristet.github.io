@@ -1844,3 +1844,536 @@ section {
         margin-bottom: 1.5rem;
     }
 }
+
+/* ===========================
+   Resume 페이지 스타일
+   =========================== */
+
+.resume-section {
+    padding: 4rem 0;
+    min-height: 100vh;
+}
+
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.resume-header .section-title {
+    margin-bottom: 0;
+}
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    color: var(--bg-primary);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.resume-description {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 3px solid var(--primary-color);
+    border-radius: 4px;
+}
+
+.resume-description p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.resume-block {
+    margin-bottom: 4rem;
+}
+
+.resume-block-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.75rem;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.resume-block-title i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--primary-color), rgba(255, 255, 255, 0.1));
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -2rem;
+    top: 0.5rem;
+    width: 12px;
+    height: 12px;
+    background: var(--primary-color);
+    border: 3px solid var(--bg-primary);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-content {
+    background: var(--bg-secondary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateX(4px);
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-title {
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.timeline-company {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.timeline-period {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+}
+
+.timeline-description {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin: 0;
+    padding-left: 0rem;
+}
+
+.project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tech-tag {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: var(--primary-color);
+}
+
+.timeline-description li {
+    margin-bottom: 0.5rem;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-category {
+    background: var(--bg-secondary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skill-category h4 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+/* Achievements */
+.achievements-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.achievement-item {
+    background: var(--bg-secondary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.achievement-item h4 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.achievement-issuer {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* 반응형: 태블릿 */
+@media (max-width: 768px) {
+    .resume-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .timeline {
+        padding-left: 1.5rem;
+    }
+    
+    .timeline-marker {
+        left: -1.5rem;
+    }
+    
+    .timeline-header {
+        flex-direction: column;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 반응형: 모바일 */
+@media (max-width: 480px) {
+    .resume-section {
+        padding: 2rem 0;
+    }
+    
+    .resume-block-title {
+        font-size: 1.5rem;
+    }
+    
+    .timeline-content {
+        padding: 1rem;
+    }
+    
+    .timeline-title {
+        font-size: 1.1rem;
+    }
+    
+    .btn-download {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ===== 인쇄용 스타일 ===== */
+@media print {
+    /* 불필요한 요소 숨김 */
+    .header,
+    .footer,
+    .btn-download,
+    #resumePdfDownload {
+        display: none !important;
+    }
+    
+    /* Resume 뷰만 표시 */
+    .content-view {
+        display: none !important;
+    }
+    
+    #resumeView {
+        display: block !important;
+    }
+    
+    /* 페이지 설정 */
+    @page {
+        margin: 1cm;
+        size: A4;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    /* Resume 섹션 */
+    .resume-section {
+        background: white !important;
+        color: black !important;
+        padding: 0 !important;
+    }
+    
+    .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    /* 헤더 */
+    .resume-header {
+        border-bottom: 2px solid #333 !important;
+        margin-bottom: 0.8rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+    
+    .section-title {
+        color: #000 !important;
+        font-size: 1.8rem !important;
+        margin: 0 !important;
+    }
+    
+    /* Description */
+    .resume-description {
+        background: #f5f5f5 !important;
+        border-left: 3px solid #333 !important;
+        color: #333 !important;
+        margin-bottom: 0.8rem !important;
+        padding: 0.6rem !important;
+    }
+    
+    .resume-description p {
+        color: #333 !important;
+        font-size: 0.9rem !important;
+        line-height: 1.4 !important;
+        margin: 0 !important;
+    }
+    
+    /* Resume 블록 */
+    .resume-block {
+        margin-bottom: 1rem !important;
+    }
+    
+    .resume-block-title {
+        color: #000 !important;
+        border-bottom: 1px solid #ddd !important;
+        font-size: 1.2rem !important;
+        margin-bottom: 0.5rem !important;
+        padding-bottom: 0.3rem !important;
+    }
+    
+    .resume-block-title i {
+        font-size: 1rem !important;
+    }
+    
+    /* 타임라인 */
+    .timeline {
+        padding-left: 1.5rem !important;
+    }
+    
+    .timeline::before {
+        background: #ddd !important;
+        left: 0.3rem !important;
+    }
+    
+    .timeline-item {
+        padding-bottom: 0.8rem !important;
+    }
+    
+    .timeline-marker {
+        background: #333 !important;
+        border-color: white !important;
+        width: 8px !important;
+        height: 8px !important;
+        left: 0 !important;
+        top: 0.3rem !important;
+    }
+    
+    .timeline-content {
+        background: white !important;
+        border: 1px solid #ddd !important;
+        color: #333 !important;
+        padding: 0.6rem !important;
+    }
+    
+    .timeline-header {
+        margin-bottom: 0.2rem !important;
+    }
+    
+    .timeline-title {
+        color: #000 !important;
+        font-size: 1rem !important;
+        margin: 0 !important;
+    }
+    
+    .timeline-company {
+        color: #555 !important;
+        font-size: 0.85rem !important;
+    }
+    
+    .timeline-period {
+        background: #f0f0f0 !important;
+        color: #333 !important;
+        font-size: 0.8rem !important;
+        padding: 0.15rem 0.5rem !important;
+        margin-bottom: 0.3rem !important;
+    }
+    
+    .timeline-description {
+        color: #444 !important;
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+        margin: 0 !important;
+    }
+    
+    /* Skills */
+    .skills-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.6rem !important;
+    }
+    
+    .skill-category h4 {
+        color: #000 !important;
+        font-size: 0.9rem !important;
+        margin-bottom: 0.3rem !important;
+    }
+    
+    .skill-tags {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 0.3rem !important;
+    }
+    
+    .skill-tag {
+        background: #f0f0f0 !important;
+        color: #333 !important;
+        border: 1px solid #ddd !important;
+        font-size: 0.75rem !important;
+        padding: 0.2rem 0.5rem !important;
+    }
+    
+    /* Project Technologies */
+    .project-technologies {
+        margin-top: 0.4rem !important;
+        gap: 0.3rem !important;
+    }
+    
+    .tech-tag {
+        background: #f5f5f5 !important;
+        color: #333 !important;
+        border: 1px solid #ddd !important;
+        font-size: 0.75rem !important;
+        padding: 0.2rem 0.5rem !important;
+    }
+    
+    /* Achievements */
+    .achievements-list {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.6rem !important;
+    }
+    
+    .achievement-item {
+        background: white !important;
+        border: 1px solid #ddd !important;
+        color: #333 !important;
+        padding: 0.5rem !important;
+    }
+    
+    .achievement-item h4 {
+        color: #000 !important;
+        font-size: 0.9rem !important;
+        margin: 0 0 0.2rem 0 !important;
+    }
+    
+    .achievement-issuer {
+        color: #555 !important;
+        font-size: 0.8rem !important;
+        margin: 0 !important;
+    }
+    
+    /* 링크 */
+    a {
+        color: #000 !important;
+        text-decoration: none !important;
+    }
+    
+    /* 페이지 나눔 방지 해제 - 자동으로 나누게 함 */
+    .resume-block,
+    .timeline-item,
+    .skill-category,
+    .achievement-item {
+        page-break-inside: auto !important;
+    }
+}

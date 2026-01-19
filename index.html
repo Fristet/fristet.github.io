@@ -45,6 +45,7 @@
                 <ul class="nav-menu">
                     <li><a href="#home" class="nav-link active">Home</a></li>
                     <li><a href="#work" class="nav-link">Work</a></li>
+                    <li><a href="#resume" class="nav-link">Resume</a></li>
                     <li><a href="#blog" class="nav-link">Blog</a></li>
                 <!--
                     <li><a href="#about" class="nav-link">About</a></li>
@@ -181,6 +182,98 @@
                 </div>
             </div>
         </section>
+        </div>
+        
+        <!-- Resume 뷰 -->
+        <div id="resumeView" class="content-view">
+            <section class="resume-section">
+                <div class="container">
+                    <div class="resume-header">
+                        <h2 class="section-title">Resume</h2>
+                        <button id="resumePdfDownload" class="btn-download">
+                            <i class="fas fa-download"></i> Download PDF
+                        </button>
+                    </div>
+                    
+                    <!-- 소개 -->
+                    <div class="resume-description" id="resumeDescriptionText">
+                        <!-- Description이 JavaScript로 동적으로 생성됩니다 -->
+                    </div>
+                    
+                    <!-- 경력 사항 -->
+                    <div class="resume-block">
+                        <h3 class="resume-block-title">
+                            <i class="fas fa-briefcase"></i> Experience
+                        </h3>
+                        <div class="timeline" id="resumeExperience">
+                            <!-- Experience 항목들이 JavaScript로 동적으로 생성됩니다 -->
+                        </div>
+                    </div>
+                    
+                    <!-- 학력 -->
+                    <div class="resume-block">
+                        <h3 class="resume-block-title">
+                            <i class="fas fa-graduation-cap"></i> Education
+                        </h3>
+                        <div class="timeline" id="resumeEducation">
+                            <!-- Education 항목들이 JavaScript로 동적으로 생성됩니다 -->
+                        </div>
+                    </div>
+                    
+                    <!-- 프로젝트 -->
+                    <div class="resume-block">
+                        <h3 class="resume-block-title">
+                            <i class="fas fa-folder-open"></i> Projects
+                        </h3>
+                        <div class="timeline" id="resumeProjects">
+                            <!-- Project 항목들이 JavaScript로 동적으로 생성됩니다 -->
+                        </div>
+                    </div>
+                    
+                    <!-- 기술 스택 -->
+                    <div class="resume-block">
+                        <h3 class="resume-block-title">
+                            <i class="fas fa-code"></i> Skills
+                        </h3>
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h4>Game Engines</h4>
+                                <div class="skill-tags" id="skillsGameEngines">
+                                    <!-- Game Engine 스킬들이 JavaScript로 동적으로 생성됩니다 -->
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Programming</h4>
+                                <div class="skill-tags" id="skillsProgramming">
+                                    <!-- Programming 스킬들이 JavaScript로 동적으로 생성됩니다 -->
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Shading</h4>
+                                <div class="skill-tags" id="skillsShading">
+                                    <!-- Shading 스킬들이 JavaScript로 동적으로 생성됩니다 -->
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>DCC Tools</h4>
+                                <div class="skill-tags" id="skillsDccTools">
+                                    <!-- DCC Tools 스킬들이 JavaScript로 동적으로 생성됩니다 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 자격증/수상 -->
+                    <div class="resume-block">
+                        <h3 class="resume-block-title">
+                            <i class="fas fa-award"></i> Certifications & Awards
+                        </h3>
+                        <div class="achievements-list" id="resumeCertifications">
+                            <!-- Certifications 항목들이 JavaScript로 동적으로 생성됩니다 -->
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
         
         <!-- 블로그 뷰 -->
